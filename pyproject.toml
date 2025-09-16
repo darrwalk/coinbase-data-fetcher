@@ -13,6 +13,7 @@ dependencies = [
     "requests>=2.31.0",
     "ratelimit>=2.2.1",
     "tenacity>=8.2.0",
+    "tqdm>=4.65.0",
 ]
 
 [project.optional-dependencies]
@@ -21,9 +22,6 @@ dev = [
     "pytest-cov>=4.0.0",
     "ruff>=0.1.0",
     "pyright>=1.1.0",
-]
-tqdm = [
-    "tqdm>=4.65.0",
 ]
 
 [project.scripts]

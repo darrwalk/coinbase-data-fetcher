@@ -10,6 +10,7 @@ A Python library for fetching historical cryptocurrency data from Coinbase with 
 - Support for multiple time granularities (1min, 5min, 15min, 1hour)
 - Optional candlestick high/low interpolation
 - Progress bar support
+- Command-line tool for batch data fetching
 
 ## Installation
 
@@ -17,12 +18,46 @@ A Python library for fetching historical cryptocurrency data from Coinbase with 
 pip install coinbase-data-fetcher
 ```
 
-For progress bar support:
+## Command Line Tool
+
+After installation, you can use the `coinbase-prefetch` command to fetch data:
+
 ```bash
-pip install coinbase-data-fetcher[tqdm]
+# Pre-fetch all data for all coins and granularities
+coinbase-prefetch
+
+# Pre-fetch specific coin (all granularities)
+coinbase-prefetch --coin bitcoin
+
+# Pre-fetch specific coin and granularity
+coinbase-prefetch --coin bitcoin --granularity 3600
+
+# Pre-fetch with custom date range
+coinbase-prefetch --coin bitcoin --granularity 3600 --start-date 2023-01-01 --end-date 2023-12-31
+
+# Use custom cache directory
+coinbase-prefetch --cache-path /custom/cache/path
+
+# Don't save CSV files (cache only)
+coinbase-prefetch --no-csv
+
+# Disable price interpolation (use raw candlestick data)
+coinbase-prefetch --coin bitcoin --granularity 3600 --no-interpolate-price
 ```
 
-## Usage
+### Command Line Options
+
+- `--coin`: Specific coin to fetch (e.g., bitcoin, ethereum, solana)
+- `--granularity`: Time granularity in seconds (60, 300, 900, 3600)
+- `--start-date`: Start date for fetching (e.g., 2023-01-01)
+- `--end-date`: End date for fetching (e.g., 2023-12-31, max: yesterday)
+- `--no-interpolate-price`: Disable price interpolation using candlestick hi/lo data (default: enabled)
+- `--cache-path`: Override default cache directory
+- `--no-csv`: Don't save CSV files, only cache JSON data
+
+## Python API Usage
+
+### Object-Oriented Interface
 
 ```python
 from coinbase_data_fetcher import CoinDataModel, CoinData, Coins
@@ -58,6 +93,18 @@ df = fetch_prices(
 )
 ```
 
+### Programmatic Pre-fetching
+
+```python
+from coinbase_data_fetcher import prefetch_all_data, fetch_data_for_coin
+
+# Pre-fetch all coins and granularities
+prefetch_all_data()
+
+# Pre-fetch specific coin and granularity
+fetch_data_for_coin('bitcoin', 3600)  # Bitcoin, 1 hour granularity
+```
+
 ## Configuration
 
 Set the cache directory using environment variable:
@@ -79,41 +126,6 @@ config.cache_path = '/path/to/cache'
 - Litecoin (LTC-USD) - Available from 2017-05-03
 - Dogecoin (DOGE-USD) - Available from 2021-06-03
 - dogwifhat (WIF-USD) - Available from 2024-11-13
-
-## Pre-fetching Data
-
-You can pre-fetch data to warm the cache:
-
-```python
-from coinbase_data_fetcher import prefetch_all_data, fetch_data_for_coin
-
-# Pre-fetch all coins and granularities
-prefetch_all_data()
-
-# Pre-fetch specific coin and granularity
-fetch_data_for_coin('bitcoin', 3600)  # Bitcoin, 1 hour granularity
-```
-
-### Command Line Tool
-
-After installation, you can use the command line tool:
-
-```bash
-# Pre-fetch all data
-coinbase-prefetch
-
-# Pre-fetch specific coin
-coinbase-prefetch --coin bitcoin
-
-# Pre-fetch specific coin and granularity
-coinbase-prefetch --coin bitcoin --granularity 3600
-
-# Use custom cache directory
-coinbase-prefetch --cache-path /custom/cache/path
-
-# Don't save CSV files (cache only)
-coinbase-prefetch --no-csv
-```
 
 ## Development
 

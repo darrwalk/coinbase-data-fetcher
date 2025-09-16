@@ -46,7 +46,7 @@ class TqdmProgressBar(ProgressBar):
     def __init__(self, total: int = 100, desc: Optional[str] = None):
         if not HAS_TQDM:
             raise ImportError("tqdm is required for TqdmProgressBar. Install with: pip install tqdm")
-        self.pbar = tqdm(total=total, desc=desc)
+        self.pbar = tqdm(total=total, desc=desc, ncols=100, bar_format='{desc}: {percentage:3.0f}%|{bar}| {postfix}')
         self.last_perc = 0
         
     def update(self, n: int = 1):

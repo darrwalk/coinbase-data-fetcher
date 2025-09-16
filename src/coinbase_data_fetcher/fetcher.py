@@ -19,7 +19,7 @@ from coinbase_data_fetcher.models import COIN_INFO, CoinInfo
 from coinbase_data_fetcher.progress import NullProgressBar, ProgressBar
 from coinbase_data_fetcher.utils import prepare_dataframe
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
 
