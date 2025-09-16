@@ -15,18 +15,18 @@ class TestCoins:
 class TestCoinInfo:
     def test_coin_info_creation(self):
         info = CoinInfo(
-            coin="test",
-            symbol="TEST-USD",
+            coin=Coins.BITCOIN,
+            symbol="BTC-USD",
             start_date=pd.Timestamp("2023-01-01")
         )
-        assert info.coin == "test"
-        assert info.symbol == "TEST-USD"
-        assert info.logo_url == "https://cryptologos.cc/logos/thumbs/test.png"
+        assert info.coin == Coins.BITCOIN
+        assert info.symbol == "BTC-USD"
+        assert info.logo_url == "https://cryptologos.cc/logos/thumbs/bitcoin.png"
     
     def test_coin_info_with_custom_logo(self):
         info = CoinInfo(
-            coin="test",
-            symbol="TEST-USD",
+            coin=Coins.ETHEREUM,
+            symbol="ETH-USD",
             start_date=pd.Timestamp("2023-01-01"),
             logo_url="https://example.com/logo.png"
         )

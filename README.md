@@ -73,12 +73,61 @@ config.cache_path = '/path/to/cache'
 
 ## Available Coins
 
-- Bitcoin (BTC-USD)
-- Ethereum (ETH-USD)
-- Solana (SOL-USD)
-- Litecoin (LTC-USD)
-- Dogecoin (DOGE-USD)
-- dogwifhat (WIF-USD)
+- Bitcoin (BTC-USD) - Available from 2015-07-20
+- Ethereum (ETH-USD) - Available from 2016-07-21
+- Solana (SOL-USD) - Available from 2021-05-24
+- Litecoin (LTC-USD) - Available from 2017-05-03
+- Dogecoin (DOGE-USD) - Available from 2021-06-03
+- dogwifhat (WIF-USD) - Available from 2024-11-13
+
+## Development
+
+### Setup
+
+1. Clone the repository
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+3. Install development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   ```
+
+### Testing
+
+Run tests with pytest:
+```bash
+source .venv/bin/activate
+pytest
+```
+
+Run tests with coverage:
+```bash
+pytest --cov=coinbase_data_fetcher
+```
+
+### Code Quality
+
+The project uses Ruff for linting and Pyright for type checking:
+```bash
+ruff check src tests
+pyright
+```
+
+### Requirements
+
+- Python 3.9+
+- Dependencies managed via pyproject.toml
+
+## API Rate Limiting
+
+The library includes built-in rate limiting (10 calls per second) and automatic retry logic with exponential backoff to handle Coinbase API limits gracefully.
+
+## Caching
+
+Fetched data is automatically cached locally to minimize API calls. The cache directory can be configured via the `COINBASE_CACHE_PATH` environment variable.
 
 ## License
 

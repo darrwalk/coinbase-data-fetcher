@@ -26,7 +26,7 @@ class Coins(StrEnum):
 
 
 class CoinInfo(BaseModel):
-    coin: str
+    coin: Coins
     symbol: str
     start_date: Timestamp
     logo_url: str = ""
@@ -40,17 +40,17 @@ class CoinInfo(BaseModel):
 
 
 COIN_INFO = {
-    Coins.BITCOIN: CoinInfo(coin="bitcoin", symbol="BTC-USD", 
+    Coins.BITCOIN: CoinInfo(coin=Coins.BITCOIN, symbol="BTC-USD", 
                             start_date=Timestamp("2015-07-20")),
-    Coins.ETHEREUM: CoinInfo(coin="ethereum", symbol="ETH-USD", 
+    Coins.ETHEREUM: CoinInfo(coin=Coins.ETHEREUM, symbol="ETH-USD", 
                             start_date=Timestamp("2016-07-21")),
-    Coins.SOLANA: CoinInfo(coin="solana", symbol="SOL-USD", 
+    Coins.SOLANA: CoinInfo(coin=Coins.SOLANA, symbol="SOL-USD", 
                             start_date=Timestamp("2021-05-24")),
-    Coins.LITECOIN: CoinInfo(coin="litecoin", symbol="LTC-USD", 
+    Coins.LITECOIN: CoinInfo(coin=Coins.LITECOIN, symbol="LTC-USD", 
                             start_date=Timestamp("2017-05-03")),
-    Coins.DOGECOIN: CoinInfo(coin="dogecoin", symbol="DOGE-USD", 
+    Coins.DOGECOIN: CoinInfo(coin=Coins.DOGECOIN, symbol="DOGE-USD", 
                             start_date=Timestamp("2021-06-03")),
-    Coins.WIF: CoinInfo(coin="dogwifhat", symbol="WIF-USD", 
+    Coins.WIF: CoinInfo(coin=Coins.WIF, symbol="WIF-USD", 
                             start_date=Timestamp("2024-11-13")),
 }
 
