@@ -10,6 +10,20 @@ class TestCoins:
         assert Coins.BITCOIN == "bitcoin"
         assert Coins.ETHEREUM == "ethereum"
         assert Coins.SOLANA == "solana"
+        assert Coins.LITECOIN == "litecoin"
+        assert Coins.DOGECOIN == "dogecoin"
+        assert Coins.WIF == "dogwifhat"
+        assert Coins.XRP == "xrp"
+        assert Coins.ADA == "ada"
+    
+    def test_all_coins_in_coin_info(self):
+        """Ensure all coins in enum have corresponding COIN_INFO entry."""
+        for coin in Coins:
+            assert coin in COIN_INFO, f"{coin} not found in COIN_INFO"
+            info = COIN_INFO[coin]
+            assert info.coin == coin
+            assert info.symbol.endswith("-USD")
+            assert isinstance(info.start_date, pd.Timestamp)
 
 
 class TestCoinInfo:
@@ -50,11 +64,22 @@ class TestCoinDataModel:
         assert model.start_date.tz is None
         assert model.end_date.tz is None
     
-    def test_get_choices(self):
+    def test_get_choices_granularity(self):
         choices = CoinDataModel.get_choices("data_granularity")
         assert 60 in choices
         assert 300 in choices
         assert 3600 in choices
+        assert 900 in choices
+    
+    def test_get_choices_coin(self):
+        choices = CoinDataModel.get_choices("coin")
+        # Should return all coins as strings
+        expected_coins = [
+            "bitcoin", "ethereum", "solana", "litecoin", 
+            "dogecoin", "dogwifhat", "xrp", "ada"
+        ]
+        assert set(choices) == set(expected_coins)
+        assert len(choices) == len(expected_coins)
 
 
 class TestCoinData:

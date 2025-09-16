@@ -23,6 +23,8 @@ class Coins(StrEnum):
     LITECOIN = "litecoin"
     DOGECOIN = "dogecoin"
     WIF = "dogwifhat"
+    XRP = "xrp"
+    ADA = "ada"
 
 
 class CoinInfo(BaseModel):
@@ -52,6 +54,10 @@ COIN_INFO = {
                             start_date=Timestamp("2021-06-03")),
     Coins.WIF: CoinInfo(coin=Coins.WIF, symbol="WIF-USD", 
                             start_date=Timestamp("2024-11-13")),
+    Coins.XRP: CoinInfo(coin=Coins.XRP, symbol="XRP-USD", 
+                            start_date=Timestamp("2019-02-28")),
+    Coins.ADA: CoinInfo(coin=Coins.ADA, symbol="ADA-USD", 
+                            start_date=Timestamp("2021-03-18")),
 }
 
 
@@ -112,10 +118,15 @@ class CoinDataModel(BaseModel):
     def get_choices(cls, field_name: str) -> list:
         """Get choices for a field if available."""
         field = cls.model_fields.get(field_name)
-        if field and hasattr(field, 'json_schema_extra'):
-            extra = field.json_schema_extra
-            if isinstance(extra, dict) and 'choices' in extra:
-                return list(extra['choices'].keys())
+        if field:
+            # Special handling for enum fields
+            if field_name == "coin" and hasattr(field.annotation, '__members__'):
+                return [member.value for member in field.annotation]
+            # Handle json_schema_extra for other fields
+            if hasattr(field, 'json_schema_extra'):
+                extra = field.json_schema_extra
+                if isinstance(extra, dict) and 'choices' in extra:
+                    return list(extra['choices'].keys())
         return []
 
 

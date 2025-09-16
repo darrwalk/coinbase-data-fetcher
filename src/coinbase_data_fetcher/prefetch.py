@@ -64,24 +64,6 @@ def fetch_data_for_coin(coin, granularity, save_csv: bool = True, progress_bar_d
     return df
 
 
-def prefetch_all_data():
-    """Pre-fetch all coin data for all granularities."""
-    coins = CoinDataModel.get_choices("coin")
-    granularities = CoinDataModel.get_choices("data_granularity")
-    
-    print(f"Pre-fetching data for {len(coins)} coins with {len(granularities)} granularities...")
-    print(f"Cache directory: {config.cache_path}")
-    
-    for coin in coins:
-        for granularity in granularities:
-            try:
-                fetch_data_for_coin(coin, granularity)
-            except Exception as e:
-                print(f"Error fetching {coin} at {granularity}s: {e}")
-                continue
-    
-    print("Pre-fetching completed!")
-
 
 def main():
     """CLI entry point for prefetching data."""
@@ -101,35 +83,27 @@ def main():
     if args.cache_path:
         config.cache_path = args.cache_path
     
-    if args.coin and args.granularity:
-        # Fetch specific coin and granularity
-        date_info = ""
-        if args.start_date or args.end_date:
-            date_info = f" from {args.start_date or 'start'} to {args.end_date or 'yesterday'}"
-        print(f"Fetching {args.coin} data at {args.granularity}s granularity{date_info}...")
-        fetch_data_for_coin(args.coin, args.granularity, save_csv=not args.no_csv, 
-                           start_date=args.start_date, end_date=args.end_date,
-                           interpolate_price=not args.no_interpolate_price)
-    elif args.coin:
-        # Fetch all granularities for specific coin
+    coins: list[str] = []
+    granularities: list[int] = []
+    if not args.coin:
+        coins = CoinDataModel.get_choices("coin")
+    else:
+        coins = [args.coin]
+        
+    if not args.granularity:
         granularities = CoinDataModel.get_choices("data_granularity")
-        date_info = ""
-        if args.start_date or args.end_date:
-            date_info = f" from {args.start_date or 'start'} to {args.end_date or 'yesterday'}"
-        print(f"Fetching all granularities for {args.coin}{date_info}...")
+    else:
+        granularities = [args.granularity]
+    
+    for coin in coins:
         for granularity in granularities:
             try:
-                fetch_data_for_coin(args.coin, granularity, save_csv=not args.no_csv,
+                fetch_data_for_coin(coin, granularity, save_csv=not args.no_csv,
                                    start_date=args.start_date, end_date=args.end_date,
                                    interpolate_price=not args.no_interpolate_price)
             except Exception as e:
-                print(f"Error fetching {args.coin} at {granularity}s: {e}")
+                print(f"Error fetching {coin} at {granularity}s: {e}")
                 continue
-    else:
-        # Fetch all coins and granularities
-        if args.start_date or args.end_date:
-            print("Warning: --start-date and --end-date are ignored when fetching all data")
-        prefetch_all_data()
 
 
 if __name__ == "__main__":

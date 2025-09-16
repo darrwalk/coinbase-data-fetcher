@@ -1,6 +1,6 @@
 # Coinbase Data Fetcher
 
-A Python library for fetching historical cryptocurrency data from Coinbase with caching support.
+A Python CLI and library for fetching historical crypto price data from Coinbase with caching support.
 
 ## Features
 
@@ -26,8 +26,17 @@ After installation, you can use the `coinbase-prefetch` command to fetch data:
 # Pre-fetch all data for all coins and granularities
 coinbase-prefetch
 
+# Pre-fetch all data with custom date range
+coinbase-prefetch --start-date 2024-01-01 --end-date 2024-01-31
+
 # Pre-fetch specific coin (all granularities)
 coinbase-prefetch --coin bitcoin
+
+# Pre-fetch XRP (Ripple) data
+coinbase-prefetch --coin xrp --granularity 3600
+
+# Pre-fetch ADA data
+coinbase-prefetch --coin ada --granularity 900
 
 # Pre-fetch specific coin and granularity
 coinbase-prefetch --coin bitcoin --granularity 3600
@@ -47,7 +56,7 @@ coinbase-prefetch --coin bitcoin --granularity 3600 --no-interpolate-price
 
 ### Command Line Options
 
-- `--coin`: Specific coin to fetch (e.g., bitcoin, ethereum, solana)
+- `--coin`: Specific coin to fetch (e.g., bitcoin, ethereum, xrp, ada)
 - `--granularity`: Time granularity in seconds (60, 300, 900, 3600)
 - `--start-date`: Start date for fetching (e.g., 2023-01-01)
 - `--end-date`: End date for fetching (e.g., 2023-12-31, max: yesterday)
@@ -96,13 +105,20 @@ df = fetch_prices(
 ### Programmatic Pre-fetching
 
 ```python
-from coinbase_data_fetcher import prefetch_all_data, fetch_data_for_coin
-
-# Pre-fetch all coins and granularities
-prefetch_all_data()
+from coinbase_data_fetcher import fetch_data_for_coin
 
 # Pre-fetch specific coin and granularity
 fetch_data_for_coin('bitcoin', 3600)  # Bitcoin, 1 hour granularity
+
+# Pre-fetch with custom parameters
+fetch_data_for_coin(
+    'ethereum', 
+    300,  # 5 minute granularity
+    start_date='2024-01-01',
+    end_date='2024-01-31',
+    save_csv=False,  # Only cache, don't save CSVs
+    interpolate_price=False  # Raw candlestick data
+)
 ```
 
 ## Configuration
@@ -126,6 +142,8 @@ config.cache_path = '/path/to/cache'
 - Litecoin (LTC-USD) - Available from 2017-05-03
 - Dogecoin (DOGE-USD) - Available from 2021-06-03
 - dogwifhat (WIF-USD) - Available from 2024-11-13
+- Ripple (XRP-USD) - Available from 2019-02-28
+- Cardano (ADA-USD) - Available from 2021-03-18
 
 ## Development
 

@@ -2,9 +2,9 @@
 
 from coinbase_data_fetcher.fetcher import fetch_prices
 from coinbase_data_fetcher.models import CoinData, CoinDataModel, CoinInfo, Coins, COIN_INFO
-from coinbase_data_fetcher.prefetch import fetch_data_for_coin, prefetch_all_data
+from coinbase_data_fetcher.prefetch import fetch_data_for_coin
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __all__ = [
     "fetch_prices",
     "Coins",
@@ -13,5 +13,4 @@ __all__ = [
     "CoinDataModel",
     "CoinData",
     "fetch_data_for_coin",
-    "prefetch_all_data",
 ]
