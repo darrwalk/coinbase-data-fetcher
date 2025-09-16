@@ -26,6 +26,9 @@ tqdm = [
     "tqdm>=4.65.0",
 ]
 
+[project.scripts]
+coinbase-prefetch = "coinbase_data_fetcher.prefetch:main"
+
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"

@@ -80,6 +80,41 @@ config.cache_path = '/path/to/cache'
 - Dogecoin (DOGE-USD) - Available from 2021-06-03
 - dogwifhat (WIF-USD) - Available from 2024-11-13
 
+## Pre-fetching Data
+
+You can pre-fetch data to warm the cache:
+
+```python
+from coinbase_data_fetcher import prefetch_all_data, fetch_data_for_coin
+
+# Pre-fetch all coins and granularities
+prefetch_all_data()
+
+# Pre-fetch specific coin and granularity
+fetch_data_for_coin('bitcoin', 3600)  # Bitcoin, 1 hour granularity
+```
+
+### Command Line Tool
+
+After installation, you can use the command line tool:
+
+```bash
+# Pre-fetch all data
+coinbase-prefetch
+
+# Pre-fetch specific coin
+coinbase-prefetch --coin bitcoin
+
+# Pre-fetch specific coin and granularity
+coinbase-prefetch --coin bitcoin --granularity 3600
+
+# Use custom cache directory
+coinbase-prefetch --cache-path /custom/cache/path
+
+# Don't save CSV files (cache only)
+coinbase-prefetch --no-csv
+```
+
 ## Development
 
 ### Setup
