@@ -25,7 +25,7 @@ dev = [
 ]
 
 [project.scripts]
-coinbase-prefetch = "coinbase_data_fetcher.prefetch:main"
+coinbase-fetch = "coinbase_data_fetcher.prefetch:main"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]

@@ -53,15 +53,21 @@ def fetch_prices(coin,
     end_time = pd.Timestamp(end_time).floor('s').tz_localize(None)
     original_start = start_time
     
-    if granularity == 60:
+    if granularity == 60: # 1 min
         num_results = 300
     elif granularity == 300:
         num_results = 12 * 24
-    elif granularity == 3600:
+    elif granularity == 900: # 15 min
+        num_results = 4 * 24
+    elif granularity == 3600: # 1 hour
         num_results = 24 * 7
         start_time = start_time - pd.Timedelta(days=start_time.dayofweek)
-    elif granularity == 900:
-        num_results = 4 * 24
+    elif granularity == 21600: # 6 hour
+        num_results = 4 * 7
+        start_time = start_time - pd.Timedelta(days=start_time.dayofweek)
+    elif granularity == 86400: # 1 day
+        num_results = 1 * 7
+        start_time = start_time - pd.Timedelta(days=start_time.dayofweek)
     else:
         raise ValueError(f"Unsupported granularity: {granularity}")
     
@@ -73,7 +79,7 @@ def fetch_prices(coin,
                              num_results=num_results)
     
     df = prepare_dataframe(raw_data, leave_pure=leave_pure, use_candle_hi_lo=use_candle_hi_lo)
-    if granularity == 3600:
+    if granularity >= 3600:
         df = df[df.index >= original_start]
     
     return df

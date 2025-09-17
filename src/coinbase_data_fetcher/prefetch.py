@@ -56,8 +56,8 @@ def fetch_data_for_coin(coin, granularity, save_csv: bool = True, progress_bar_d
         cache_path = config.cache_path
         if not os.path.exists(cache_path):
             os.makedirs(cache_path)
-        
-        csv_path = f'{cache_path}/{coin}_{granularity}_{start_date}_{end_date}.csv'
+        interpolate_str = "_interpolated_price" if interpolate_price else ""
+        csv_path = f'{cache_path}/{coin}_{granularity}_{start_date}_{end_date}{interpolate_str}.csv'
         df.to_csv(csv_path)
         print(f"Saved: {csv_path}")
     
@@ -68,30 +68,57 @@ def fetch_data_for_coin(coin, granularity, save_csv: bool = True, progress_bar_d
 def main():
     """CLI entry point for prefetching data."""
     import argparse
+    import sys
     
     parser = argparse.ArgumentParser(description="Pre-fetch cryptocurrency data")
-    parser.add_argument('--coin', help="Specific coin to fetch (e.g., bitcoin)")
-    parser.add_argument('--granularity', type=int, help="Specific granularity in seconds (e.g., 3600)")
-    parser.add_argument('--start-date', help="Start date for fetching (e.g., 2023-01-01)")
-    parser.add_argument('--end-date', help="End date for fetching (e.g., 2023-12-31)")
-    parser.add_argument('--no-interpolate-price', action='store_true', help="Don't interpolate prices using candlestick hi/lo data")
+    parser.add_argument('--coin', required=True, help="Coin to fetch: 'all' for all supported coins, or specific coin name (e.g., bitcoin)")
+    parser.add_argument('--granularity', type=int, help="Specific granularity in seconds. Valid values: 60 (1 min), 300 (5 min), 900 (15 min), 3600 (1 hour), 21600 (6 hours), 86400 (1 day)")
+    parser.add_argument('--start-date', help="Start date for fetching (e.g., 2023-01-01). Default: earliest available date for the coin")
+    parser.add_argument('--end-date', help="End date for fetching (e.g., 2023-12-31). Default: yesterday")
+    parser.add_argument('--interpolate-price', action='store_true', help="Interpolate prices using candlestick hi/lo data")
     parser.add_argument('--no-csv', action='store_true', help="Don't save CSV files")
     parser.add_argument('--cache-path', help="Override cache directory")
+    parser.add_argument('--list-coins', action='store_true', help="List all supported coins with their start dates")
     
     args = parser.parse_args()
+    
+    # Handle list-coins option
+    if args.list_coins:
+        print("Supported cryptocurrencies:")
+        print("=" * 50)
+        for coin_info in COIN_INFO.values():
+            print(f"{coin_info.coin:<20} | {coin_info.symbol:<10} | Start: {coin_info.start_date.strftime('%Y-%m-%d')}")
+        return
     
     if args.cache_path:
         config.cache_path = args.cache_path
     
-    coins: list[str] = []
-    granularities: list[int] = []
-    if not args.coin:
-        coins = CoinDataModel.get_choices("coin")
-    else:
+    # Get valid choices
+    valid_granularities = CoinDataModel.get_choices("data_granularity")
+    valid_coins = CoinDataModel.get_choices("coin")
+    
+    # Validate granularity if provided
+    if args.granularity and args.granularity not in valid_granularities:
+        print(f"Error: Unsupported granularity {args.granularity} seconds.")
+        print(f"Valid granularities are: {', '.join(str(g) + ' seconds' for g in valid_granularities)}")
+        sys.exit(1)
+    
+    # Validate and process coin argument
+    if args.coin == "all":
+        coins = valid_coins
+    elif args.coin in valid_coins:
         coins = [args.coin]
+    else:
+        print(f"Error: Unsupported coin '{args.coin}'.")
+        print(f"Valid coins are: 'all' or one of: {', '.join(valid_coins)}")
+        print("Use --list-coins to see all supported coins with start dates.")
+        sys.exit(1)
+    
+    coins: list[str] = coins
+    granularities: list[int] = []
         
     if not args.granularity:
-        granularities = CoinDataModel.get_choices("data_granularity")
+        granularities = valid_granularities
     else:
         granularities = [args.granularity]
     
@@ -100,7 +127,7 @@ def main():
             try:
                 fetch_data_for_coin(coin, granularity, save_csv=not args.no_csv,
                                    start_date=args.start_date, end_date=args.end_date,
-                                   interpolate_price=not args.no_interpolate_price)
+                                   interpolate_price=args.interpolate_price)
             except Exception as e:
                 print(f"Error fetching {coin} at {granularity}s: {e}")
                 continue

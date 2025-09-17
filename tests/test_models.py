@@ -7,6 +7,7 @@ from coinbase_data_fetcher.models import CoinData, CoinDataModel, CoinInfo, Coin
 
 class TestCoins:
     def test_coin_enum_values(self):
+        # Test a sample of important coins
         assert Coins.BITCOIN == "bitcoin"
         assert Coins.ETHEREUM == "ethereum"
         assert Coins.SOLANA == "solana"
@@ -15,6 +16,11 @@ class TestCoins:
         assert Coins.WIF == "dogwifhat"
         assert Coins.XRP == "xrp"
         assert Coins.ADA == "ada"
+        assert Coins.AVAX == "avalanche"
+        assert Coins.DOT == "polkadot"
+        assert Coins.MATIC == "polygon"
+        assert Coins.UNI == "uniswap"
+        assert Coins.ONEINCH == "1inch"
     
     def test_all_coins_in_coin_info(self):
         """Ensure all coins in enum have corresponding COIN_INFO entry."""
@@ -74,12 +80,15 @@ class TestCoinDataModel:
     def test_get_choices_coin(self):
         choices = CoinDataModel.get_choices("coin")
         # Should return all coins as strings
-        expected_coins = [
-            "bitcoin", "ethereum", "solana", "litecoin", 
-            "dogecoin", "dogwifhat", "xrp", "ada"
-        ]
-        assert set(choices) == set(expected_coins)
-        assert len(choices) == len(expected_coins)
+        # Verify we have many coins
+        assert len(choices) > 50  # We added 56 coins
+        # Check some key coins are present
+        assert "bitcoin" in choices
+        assert "ethereum" in choices
+        assert "avalanche" in choices
+        assert "polygon" in choices
+        assert "uniswap" in choices
+        assert "1inch" in choices
 
 
 class TestCoinData:

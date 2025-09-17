@@ -7,7 +7,7 @@ A Python CLI and library for fetching historical crypto price data from Coinbase
 - Fetch historical price data for multiple cryptocurrencies
 - Built-in rate limiting and retry logic
 - Local caching to minimize API calls
-- Support for multiple time granularities (1min, 5min, 15min, 1hour)
+- Support for multiple time granularities (1min, 5min, 15min, 1hour, 6hour, 1day)
 - Optional candlestick high/low interpolation
 - Progress bar support
 - Command-line tool for batch data fetching
@@ -20,47 +20,53 @@ pip install coinbase-data-fetcher
 
 ## Command Line Tool
 
-After installation, you can use the `coinbase-prefetch` command to fetch data:
+After installation, you can use the `coinbase-fetch` command to fetch data:
 
 ```bash
+# List all supported coins
+coinbase-fetch --list-coins
+
 # Pre-fetch all data for all coins and granularities
-coinbase-prefetch
+coinbase-fetch
 
 # Pre-fetch all data with custom date range
-coinbase-prefetch --start-date 2024-01-01 --end-date 2024-01-31
+coinbase-fetch --start-date 2024-01-01 --end-date 2024-01-31
 
 # Pre-fetch specific coin (all granularities)
-coinbase-prefetch --coin bitcoin
+coinbase-fetch --coin bitcoin
 
 # Pre-fetch XRP (Ripple) data
-coinbase-prefetch --coin xrp --granularity 3600
+coinbase-fetch --coin xrp --granularity 3600
 
-# Pre-fetch ADA data
-coinbase-prefetch --coin ada --granularity 900
+# Pre-fetch various cryptocurrencies
+coinbase-fetch --coin avalanche --granularity 3600
+coinbase-fetch --coin polygon --granularity 300
+coinbase-fetch --coin uniswap --granularity 900
 
 # Pre-fetch specific coin and granularity
-coinbase-prefetch --coin bitcoin --granularity 3600
+coinbase-fetch --coin bitcoin --granularity 3600
 
 # Pre-fetch with custom date range
-coinbase-prefetch --coin bitcoin --granularity 3600 --start-date 2023-01-01 --end-date 2023-12-31
+coinbase-fetch --coin bitcoin --granularity 3600 --start-date 2023-01-01 --end-date 2023-12-31
 
 # Use custom cache directory
-coinbase-prefetch --cache-path /custom/cache/path
+coinbase-fetch --cache-path /custom/cache/path
 
 # Don't save CSV files (cache only)
-coinbase-prefetch --no-csv
+coinbase-fetch --no-csv
 
-# Disable price interpolation (use raw candlestick data)
-coinbase-prefetch --coin bitcoin --granularity 3600 --no-interpolate-price
+# Enable price interpolation using candlestick hi/lo data
+coinbase-fetch --coin bitcoin --granularity 3600 --interpolate-price
 ```
 
 ### Command Line Options
 
+- `--list-coins`: List all supported coins with their start dates
 - `--coin`: Specific coin to fetch (e.g., bitcoin, ethereum, xrp, ada)
-- `--granularity`: Time granularity in seconds (60, 300, 900, 3600)
-- `--start-date`: Start date for fetching (e.g., 2023-01-01)
-- `--end-date`: End date for fetching (e.g., 2023-12-31, max: yesterday)
-- `--no-interpolate-price`: Disable price interpolation using candlestick hi/lo data (default: enabled)
+- `--granularity`: Time granularity in seconds (60, 300, 900, 3600, 21600, 86400)
+- `--start-date`: Start date for fetching (e.g., 2023-01-01). Default: earliest available date for the coin
+- `--end-date`: End date for fetching (e.g., 2023-12-31). Default: yesterday
+- `--interpolate-price`: Enable price interpolation using candlestick hi/lo data (default: disabled)
 - `--cache-path`: Override default cache directory
 - `--no-csv`: Don't save CSV files, only cache JSON data
 
@@ -136,14 +142,37 @@ config.cache_path = '/path/to/cache'
 
 ## Available Coins
 
-- Bitcoin (BTC-USD) - Available from 2015-07-20
-- Ethereum (ETH-USD) - Available from 2016-07-21
-- Solana (SOL-USD) - Available from 2021-05-24
-- Litecoin (LTC-USD) - Available from 2017-05-03
-- Dogecoin (DOGE-USD) - Available from 2021-06-03
-- dogwifhat (WIF-USD) - Available from 2024-11-13
-- Ripple (XRP-USD) - Available from 2019-02-28
-- Cardano (ADA-USD) - Available from 2021-03-18
+The library supports 57 cryptocurrencies available on Coinbase, including:
+
+### Major Cryptocurrencies
+- Bitcoin (BTC-USD) - Since 2015-07-20
+- Ethereum (ETH-USD) - Since 2016-07-21
+
+### Top Market Cap Coins
+- Solana (SOL-USD), Ripple (XRP-USD), Cardano (ADA-USD)
+- Avalanche (AVAX-USD), Polkadot (DOT-USD), Polygon (MATIC-USD)
+- Chainlink (LINK-USD), Dogecoin (DOGE-USD)
+
+### DeFi Tokens
+- Uniswap (UNI-USD), Aave (AAVE-USD), Curve (CRV-USD)
+- Maker (MKR-USD), Compound (COMP-USD), SushiSwap (SUSHI-USD)
+
+### Layer 2 Solutions
+- Arbitrum (ARB-USD), Optimism (OP-USD)
+
+### Gaming & Metaverse
+- Sandbox (SAND-USD), Decentraland (MANA-USD), ApeCoin (APE-USD)
+- Axie Infinity (AXS-USD), ImmutableX (IMX-USD)
+
+### And many more...
+Including Cosmos (ATOM), Filecoin (FIL), The Graph (GRT), Algorand (ALGO), and others.
+
+Use `coinbase-fetch --coin <name>` with the lowercase name (e.g., bitcoin, ethereum, avalanche)
+
+To see all available coins with their start dates, run:
+```bash
+coinbase-fetch --list-coins
+```
 
 ## Development
 
