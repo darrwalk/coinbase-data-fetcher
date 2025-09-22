@@ -71,7 +71,7 @@ def main():
     import sys
     
     parser = argparse.ArgumentParser(description="Pre-fetch cryptocurrency data")
-    parser.add_argument('--coin', required=True, help="Coin to fetch: 'all' for all supported coins, or specific coin name (e.g., bitcoin)")
+    parser.add_argument('--coin', help="Coin to fetch: 'all' for all supported coins, or specific coin name (e.g., bitcoin)")
     parser.add_argument('--granularity', type=int, help="Specific granularity in seconds. Valid values: 60 (1 min), 300 (5 min), 900 (15 min), 3600 (1 hour), 21600 (6 hours), 86400 (1 day)")
     parser.add_argument('--start-date', help="Start date for fetching (e.g., 2023-01-01). Default: earliest available date for the coin")
     parser.add_argument('--end-date', help="End date for fetching (e.g., 2023-12-31). Default: yesterday")
@@ -89,6 +89,10 @@ def main():
         for coin_info in COIN_INFO.values():
             print(f"{coin_info.coin:<20} | {coin_info.symbol:<10} | Start: {coin_info.start_date.strftime('%Y-%m-%d')}")
         return
+    
+    # If not listing coins, --coin is required
+    if not args.coin:
+        parser.error("the following arguments are required: --coin")
     
     if args.cache_path:
         config.cache_path = args.cache_path

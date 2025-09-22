@@ -15,7 +15,8 @@ from tenacity import retry, retry_if_exception_type, wait_exponential
 from tenacity.stop import stop_after_attempt
 
 from coinbase_data_fetcher.config import config
-from coinbase_data_fetcher.models import COIN_INFO, CoinInfo
+from coinbase_data_fetcher.models import COIN_INFO
+from coinbase_data_fetcher.config_loader import CoinInfo
 from coinbase_data_fetcher.progress import NullProgressBar, ProgressBar
 from coinbase_data_fetcher.utils import prepare_dataframe
 

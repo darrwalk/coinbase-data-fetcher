@@ -2,7 +2,8 @@
 
 import pandas as pd
 import pytest
-from coinbase_data_fetcher.models import CoinData, CoinDataModel, CoinInfo, Coins, COIN_INFO
+from coinbase_data_fetcher.models import CoinData, CoinDataModel, Coins, COIN_INFO
+from coinbase_data_fetcher.config_loader import CoinInfo
 
 
 class TestCoins:

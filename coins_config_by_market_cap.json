@@ -1,0 +1,136 @@
+{
+  "coins": [
+    {
+      "id": "bitcoin",
+      "symbol": "BTC-USD",
+      "start_date": "2015-07-20",
+      "category": "Major cryptocurrencies"
+    },
+    {
+      "id": "ethereum",
+      "symbol": "ETH-USD",
+      "start_date": "2016-07-21",
+      "category": "Major cryptocurrencies"
+    },
+    {
+      "id": "solana",
+      "symbol": "SOL-USD",
+      "start_date": "2021-05-24",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "dogecoin",
+      "symbol": "DOGE-USD",
+      "start_date": "2021-06-03",
+      "category": "Meme coins"
+    },
+    {
+      "id": "chainlink",
+      "symbol": "LINK-USD",
+      "start_date": "2019-06-27",
+      "category": "Infrastructure & Web3"
+    },
+    {
+      "id": "sui",
+      "symbol": "SUI-USD",
+      "start_date": "2023-05-03",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "stellar",
+      "symbol": "XLM-USD",
+      "start_date": "2019-03-12",
+      "category": "Privacy & Payments"
+    },
+    {
+      "id": "bitcoin-cash",
+      "symbol": "BCH-USD",
+      "start_date": "2017-12-19",
+      "category": "Bitcoin forks & Classic"
+    },
+    {
+      "id": "litecoin",
+      "symbol": "LTC-USD",
+      "start_date": "2017-05-03",
+      "category": "Bitcoin forks & Classic"
+    },
+    {
+      "id": "shiba-inu",
+      "symbol": "SHIB-USD",
+      "start_date": "2021-09-09",
+      "category": "Meme coins"
+    },
+    {
+      "id": "polkadot",
+      "symbol": "DOT-USD",
+      "start_date": "2021-06-16",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "uniswap",
+      "symbol": "UNI-USD",
+      "start_date": "2020-09-17",
+      "category": "DeFi tokens"
+    },
+    {
+      "id": "aave",
+      "symbol": "AAVE-USD",
+      "start_date": "2020-12-16",
+      "category": "DeFi tokens"
+    },
+    {
+      "id": "near",
+      "symbol": "NEAR-USD",
+      "start_date": "2022-10-13",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "aptos",
+      "symbol": "APT-USD",
+      "start_date": "2022-10-19",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "ethereum-classic",
+      "symbol": "ETC-USD",
+      "start_date": "2018-08-07",
+      "category": "Bitcoin forks & Classic"
+    },
+    {
+      "id": "arbitrum",
+      "symbol": "ARB-USD",
+      "start_date": "2023-03-23",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "internet-computer",
+      "symbol": "ICP-USD",
+      "start_date": "2021-05-11",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "vechain",
+      "symbol": "VET-USD",
+      "start_date": "2023-11-01",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "cosmos",
+      "symbol": "ATOM-USD",
+      "start_date": "2020-01-16",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "algorand",
+      "symbol": "ALGO-USD",
+      "start_date": "2019-08-01",
+      "category": "Layer 1 & Layer 2"
+    },
+    {
+      "id": "filecoin",
+      "symbol": "FIL-USD",
+      "start_date": "2020-12-16",
+      "category": "Infrastructure & Web3"
+    }
+  ]
+}
