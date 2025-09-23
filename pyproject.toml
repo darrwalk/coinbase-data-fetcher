@@ -1,6 +1,6 @@
 [project]
 name = "coinbase-data-fetcher"
-version = "0.4.0"
+version = "0.4.1"
 description = "A Python library for fetching cryptocurrency data from Coinbase"
 authors = [{name = "TradeOptimizer Team"}]
 readme = "README.md"
