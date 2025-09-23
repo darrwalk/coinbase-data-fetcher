@@ -1,1948 +1,571 @@
 {
   "coins": [
     {
-      "id": "quant",
-      "symbol": "QNT-USD",
-      "start_date": "2025-03-06",
-      "category": "Enterprise & Other"
-    },
-    {
-      "id": "pirate",
-      "symbol": "PIRATE-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "dogwifhat",
-      "symbol": "WIF-USD",
-      "start_date": "2025-06-07",
-      "category": "Meme coins"
-    },
-    {
-      "id": "morpho",
-      "symbol": "MORPHO-USD",
-      "start_date": "2025-09-15",
-      "category": "Other"
-    },
-    {
-      "id": "prime",
-      "symbol": "PRIME-USD",
-      "start_date": "2024-12-28",
-      "category": "Other"
-    },
-    {
-      "id": "algorand",
-      "symbol": "ALGO-USD",
-      "start_date": "2020-09-04",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "vvv",
-      "symbol": "VVV-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "flow",
-      "symbol": "FLOW-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "farm",
-      "symbol": "FARM-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "giga",
-      "symbol": "GIGA-USD",
-      "start_date": "2025-09-06",
-      "category": "Other"
-    },
-    {
-      "id": "aurora",
-      "symbol": "AURORA-USD",
-      "start_date": "2025-05-31",
-      "category": "Other"
-    },
-    {
-      "id": "jto",
-      "symbol": "JTO-USD",
-      "start_date": "2025-08-01",
-      "category": "Other"
-    },
-    {
-      "id": "ctx",
-      "symbol": "CTX-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ctsi",
-      "symbol": "CTSI-USD",
-      "start_date": "2021-05-12",
-      "category": "Other"
-    },
-    {
-      "id": "lrds",
-      "symbol": "LRDS-USD",
-      "start_date": "2025-08-01",
-      "category": "Other"
-    },
-    {
-      "id": "near",
-      "symbol": "NEAR-USD",
-      "start_date": "2025-06-14",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "the-graph",
-      "symbol": "GRT-USD",
-      "start_date": "2021-05-12",
-      "category": "Infrastructure & Web3"
-    },
-    {
-      "id": "hft",
-      "symbol": "HFT-USD",
-      "start_date": "2023-07-05",
-      "category": "Other"
-    },
-    {
-      "id": "fai",
-      "symbol": "FAI-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "sapien",
-      "symbol": "SAPIEN-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "hnt",
-      "symbol": "HNT-USD",
-      "start_date": "2023-07-18",
-      "category": "Other"
-    },
-    {
-      "id": "avalanche",
-      "symbol": "AVAX-USD",
-      "start_date": "2025-06-11",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "spx",
-      "symbol": "SPX-USD",
-      "start_date": "2025-09-15",
-      "category": "Other"
-    },
-    {
-      "id": "zetachain",
-      "symbol": "ZETACHAIN-USD",
-      "start_date": "2025-03-17",
-      "category": "Other"
-    },
-    {
-      "id": "forth",
-      "symbol": "FORTH-USD",
-      "start_date": "2025-09-20",
-      "category": "Other"
-    },
-    {
-      "id": "ethereum-classic",
-      "symbol": "ETC-USD",
-      "start_date": "2020-10-22",
-      "category": "Bitcoin forks & Classic"
-    },
-    {
-      "id": "nmr",
-      "symbol": "NMR-USD",
-      "start_date": "2024-06-21",
-      "category": "Other"
-    },
-    {
-      "id": "dai",
-      "symbol": "DAI-USD",
-      "start_date": "2020-10-25",
-      "category": "Stablecoins"
-    },
-    {
-      "id": "synthetix",
-      "symbol": "SNX-USD",
-      "start_date": "2025-01-01",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "osmo",
-      "symbol": "OSMO-USD",
-      "start_date": "2025-08-21",
-      "category": "Other"
-    },
-    {
-      "id": "cow",
-      "symbol": "COW-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "s",
-      "symbol": "S-USD",
-      "start_date": "2025-09-15",
-      "category": "Other"
-    },
-    {
-      "id": "chiliz",
-      "symbol": "CHZ-USD",
-      "start_date": "2024-05-04",
-      "category": "Utility tokens"
-    },
-    {
-      "id": "mnde",
-      "symbol": "MNDE-USD",
-      "start_date": "2025-06-11",
-      "category": "Other"
-    },
-    {
-      "id": "sushiswap",
-      "symbol": "SUSHI-USD",
-      "start_date": "2025-09-20",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "glm",
-      "symbol": "GLM-USD",
-      "start_date": "2023-04-20",
-      "category": "Other"
-    },
-    {
-      "id": "ethereum-name-service",
-      "symbol": "ENS-USD",
-      "start_date": "2025-09-09",
-      "category": "Gaming & Metaverse"
-    },
-    {
-      "id": "stellar",
-      "symbol": "XLM-USD",
-      "start_date": "2022-02-19",
-      "category": "Privacy & Payments"
-    },
-    {
-      "id": "sxt",
-      "symbol": "SXT-USD",
-      "start_date": "2025-05-26",
-      "category": "Other"
-    },
-    {
-      "id": "rlc",
-      "symbol": "RLC-USD",
-      "start_date": "2021-05-12",
-      "category": "Other"
-    },
-    {
-      "id": "useless",
-      "symbol": "USELESS-USD",
-      "start_date": "2025-09-09",
-      "category": "Other"
-    },
-    {
-      "id": "axl",
-      "symbol": "AXL-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ip",
-      "symbol": "IP-USD",
-      "start_date": "2025-07-01",
-      "category": "Other"
-    },
-    {
-      "id": "acx",
-      "symbol": "ACX-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "lido",
-      "symbol": "LDO-USD",
-      "start_date": "2024-01-28",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "pond",
-      "symbol": "POND-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "fis",
-      "symbol": "FIS-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ogn",
-      "symbol": "OGN-USD",
-      "start_date": "2021-06-16",
-      "category": "Other"
-    },
-    {
-      "id": "fort",
-      "symbol": "FORT-USD",
-      "start_date": "2024-08-16",
-      "category": "Other"
-    },
-    {
-      "id": "rez",
-      "symbol": "REZ-USD",
-      "start_date": "2025-07-21",
-      "category": "Other"
-    },
-    {
-      "id": "plu",
-      "symbol": "PLU-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "sandbox",
-      "symbol": "SAND-USD",
-      "start_date": "2025-06-11",
-      "category": "Gaming & Metaverse"
-    },
-    {
-      "id": "kmno",
-      "symbol": "KMNO-USD",
-      "start_date": "2025-09-15",
-      "category": "Other"
-    },
-    {
-      "id": "io",
-      "symbol": "IO-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "fox",
-      "symbol": "FOX-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ada",
-      "symbol": "ADA-USD",
-      "start_date": "2023-01-01",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "well",
-      "symbol": "WELL-USD",
-      "start_date": "2025-09-03",
-      "category": "Other"
-    },
-    {
-      "id": "arpa",
-      "symbol": "ARPA-USD",
-      "start_date": "2025-06-14",
-      "category": "Other"
-    },
-    {
-      "id": "polygon",
-      "symbol": "MATIC-USD",
-      "start_date": "2021-05-06",
-      "category": "Other"
-    },
-    {
-      "id": "ronin",
-      "symbol": "RONIN-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ilv",
-      "symbol": "ILV-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "popcat",
-      "symbol": "POPCAT-USD",
-      "start_date": "2025-09-06",
-      "category": "Other"
-    },
-    {
-      "id": "safe",
-      "symbol": "SAFE-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "blast",
-      "symbol": "BLAST-USD",
-      "start_date": "2025-06-29",
-      "category": "Other"
-    },
-    {
-      "id": "cosmos",
-      "symbol": "ATOM-USD",
-      "start_date": "2025-08-27",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "nct",
-      "symbol": "NCT-USD",
-      "start_date": "2025-03-06",
-      "category": "Other"
-    },
-    {
-      "id": "alcx",
-      "symbol": "ALCX-USD",
-      "start_date": "2024-08-13",
-      "category": "Other"
-    },
-    {
-      "id": "yearn-finance",
-      "symbol": "YFI-USD",
-      "start_date": "2023-01-01",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "t",
-      "symbol": "T-USD",
-      "start_date": "2025-05-20",
-      "category": "Other"
-    },
-    {
-      "id": "pax",
-      "symbol": "PAX-USD",
-      "start_date": "2023-01-01",
-      "category": "Stablecoins"
-    },
-    {
-      "id": "neon",
-      "symbol": "NEON-USD",
-      "start_date": "2025-06-26",
-      "category": "Other"
-    },
-    {
-      "id": "dogecoin",
-      "symbol": "DOGE-USD",
-      "start_date": "2024-05-22",
-      "category": "Meme coins"
-    },
-    {
-      "id": "blz",
-      "symbol": "BLZ-USD",
-      "start_date": "2025-09-09",
-      "category": "Other"
-    },
-    {
-      "id": "arbitrum",
-      "symbol": "ARB-USD",
-      "start_date": "2023-04-09",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "blur",
-      "symbol": "BLUR-USD",
-      "start_date": "2024-03-15",
-      "category": "Gaming & Metaverse"
-    },
-    {
-      "id": "lseth",
-      "symbol": "LSETH-USD",
-      "start_date": "2025-09-09",
-      "category": "Other"
-    },
-    {
-      "id": "voxel",
-      "symbol": "VOXEL-USD",
-      "start_date": "2023-06-23",
-      "category": "Other"
-    },
-    {
-      "id": "rari",
-      "symbol": "RARI-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "00",
-      "symbol": "00-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "xcn",
-      "symbol": "XCN-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "cgld",
-      "symbol": "CGLD-USD",
-      "start_date": "2023-07-18",
-      "category": "Other"
-    },
-    {
-      "id": "xyo",
-      "symbol": "XYO-USD",
-      "start_date": "2025-09-13",
-      "category": "Other"
-    },
-    {
-      "id": "mplx",
-      "symbol": "MPLX-USD",
-      "start_date": "2025-08-26",
-      "category": "Other"
-    },
-    {
-      "id": "seam",
-      "symbol": "SEAM-USD",
-      "start_date": "2025-09-20",
-      "category": "Other"
-    },
-    {
-      "id": "cosmosdydx",
-      "symbol": "COSMOSDYDX-USD",
-      "start_date": "2025-09-13",
-      "category": "Other"
-    },
-    {
-      "id": "alice",
-      "symbol": "ALICE-USD",
-      "start_date": "2024-12-17",
-      "category": "Other"
-    },
-    {
-      "id": "axie-infinity",
-      "symbol": "AXS-USD",
-      "start_date": "2023-01-01",
-      "category": "Gaming & Metaverse"
-    },
-    {
-      "id": "index",
-      "symbol": "INDEX-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ath",
-      "symbol": "ATH-USD",
-      "start_date": "2025-09-17",
-      "category": "Other"
-    },
-    {
-      "id": "optimism",
-      "symbol": "OP-USD",
-      "start_date": "2023-01-01",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "g",
-      "symbol": "G-USD",
-      "start_date": "2025-07-16",
-      "category": "Other"
-    },
-    {
-      "id": "uma",
-      "symbol": "UMA-USD",
-      "start_date": "2025-09-18",
-      "category": "Other"
-    },
-    {
-      "id": "rsr",
-      "symbol": "RSR-USD",
-      "start_date": "2025-05-20",
-      "category": "Other"
-    },
-    {
-      "id": "kava",
-      "symbol": "KAVA-USD",
-      "start_date": "2023-07-15",
-      "category": "Other"
-    },
-    {
-      "id": "bonk",
-      "symbol": "BONK-USD",
-      "start_date": "2025-06-06",
-      "category": "Other"
-    },
-    {
-      "id": "usd1",
-      "symbol": "USD1-USD",
-      "start_date": "2025-09-20",
-      "category": "Other"
-    },
-    {
-      "id": "band",
-      "symbol": "BAND-USD",
-      "start_date": "2021-01-30",
-      "category": "Other"
-    },
-    {
-      "id": "waxl",
-      "symbol": "WAXL-USD",
-      "start_date": "2023-05-04",
-      "category": "Other"
-    },
-    {
-      "id": "keycat",
-      "symbol": "KEYCAT-USD",
-      "start_date": "2025-09-17",
-      "category": "Other"
-    },
-    {
-      "id": "kaito",
-      "symbol": "KAITO-USD",
-      "start_date": "2025-02-22",
-      "category": "Other"
-    },
-    {
-      "id": "metis",
-      "symbol": "METIS-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "storj",
-      "symbol": "STORJ-USD",
-      "start_date": "2024-08-13",
-      "category": "Other"
-    },
-    {
-      "id": "jasmy",
-      "symbol": "JASMY-USD",
-      "start_date": "2022-03-01",
-      "category": "Other"
-    },
-    {
-      "id": "fet",
-      "symbol": "FET-USD",
-      "start_date": "2024-07-24",
-      "category": "Other"
-    },
-    {
-      "id": "agld",
-      "symbol": "AGLD-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "zrx",
-      "symbol": "ZRX-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "zeta",
-      "symbol": "ZETA-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "shiba-inu",
-      "symbol": "SHIB-USD",
-      "start_date": "2025-09-09",
-      "category": "Meme coins"
-    },
-    {
-      "id": "wld",
-      "symbol": "WLD-USD",
-      "start_date": "2025-09-06",
-      "category": "Other"
-    },
-    {
-      "id": "zora",
-      "symbol": "ZORA-USD",
-      "start_date": "2025-09-17",
-      "category": "Other"
-    },
-    {
-      "id": "aergo",
-      "symbol": "AERGO-USD",
-      "start_date": "2024-05-29",
-      "category": "Other"
-    },
-    {
-      "id": "zen",
-      "symbol": "ZEN-USD",
-      "start_date": "2024-02-27",
-      "category": "Other"
-    },
-    {
-      "id": "vechain",
-      "symbol": "VET-USD",
-      "start_date": "2024-08-16",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "drift",
-      "symbol": "DRIFT-USD",
-      "start_date": "2025-03-06",
-      "category": "Other"
-    },
-    {
-      "id": "clanker",
-      "symbol": "CLANKER-USD",
-      "start_date": "2025-08-27",
-      "category": "Other"
-    },
-    {
-      "id": "ocean",
-      "symbol": "OCEAN-USD",
-      "start_date": "2023-06-10",
-      "category": "Other"
-    },
-    {
-      "id": "usds",
-      "symbol": "USDS-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "layer",
-      "symbol": "LAYER-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "compound",
-      "symbol": "COMP-USD",
-      "start_date": "2021-01-27",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "solana",
-      "symbol": "SOL-USD",
-      "start_date": "2021-06-19",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "coti",
-      "symbol": "COTI-USD",
-      "start_date": "2024-12-21",
-      "category": "Other"
-    },
-    {
-      "id": "pols",
-      "symbol": "POLS-USD",
-      "start_date": "2024-01-20",
-      "category": "Other"
-    },
-    {
-      "id": "1inch",
-      "symbol": "1INCH-USD",
-      "start_date": "2023-03-22",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "floki",
-      "symbol": "FLOKI-USD",
-      "start_date": "2025-03-06",
-      "category": "Meme coins"
-    },
-    {
-      "id": "ast",
-      "symbol": "AST-USD",
-      "start_date": "2024-08-07",
-      "category": "Other"
-    },
-    {
-      "id": "corechain",
-      "symbol": "CORECHAIN-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "cake",
-      "symbol": "CAKE-USD",
-      "start_date": "2025-09-06",
-      "category": "Other"
-    },
-    {
-      "id": "ksm",
-      "symbol": "KSM-USD",
-      "start_date": "2025-07-09",
-      "category": "Other"
-    },
-    {
-      "id": "lqty",
-      "symbol": "LQTY-USD",
-      "start_date": "2023-07-18",
-      "category": "Other"
-    },
-    {
-      "id": "aptos",
-      "symbol": "APT-USD",
-      "start_date": "2023-01-01",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "me",
-      "symbol": "ME-USD",
-      "start_date": "2025-02-09",
-      "category": "Other"
-    },
-    {
-      "id": "apecoin",
-      "symbol": "APE-USD",
-      "start_date": "2025-01-28",
-      "category": "Gaming & Metaverse"
-    },
-    {
-      "id": "moodeng",
-      "symbol": "MOODENG-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "tao",
-      "symbol": "TAO-USD",
-      "start_date": "2025-09-20",
-      "category": "Other"
-    },
-    {
-      "id": "eos",
-      "symbol": "EOS-USD",
-      "start_date": "2025-04-22",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "wct",
-      "symbol": "WCT-USD",
-      "start_date": "2025-09-18",
-      "category": "Other"
-    },
-    {
-      "id": "zcash",
-      "symbol": "ZEC-USD",
-      "start_date": "2024-01-30",
-      "category": "Privacy & Payments"
-    },
-    {
-      "id": "sei",
-      "symbol": "SEI-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "abt",
-      "symbol": "ABT-USD",
-      "start_date": "2024-07-28",
-      "category": "Other"
-    },
-    {
-      "id": "zk",
-      "symbol": "ZK-USD",
-      "start_date": "2025-02-15",
-      "category": "Other"
-    },
-    {
-      "id": "swftc",
-      "symbol": "SWFTC-USD",
-      "start_date": "2025-03-03",
-      "category": "Other"
-    },
-    {
-      "id": "gods",
-      "symbol": "GODS-USD",
-      "start_date": "2025-02-28",
-      "category": "Other"
-    },
-    {
-      "id": "hopr",
-      "symbol": "HOPR-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "iotx",
-      "symbol": "IOTX-USD",
-      "start_date": "2025-08-02",
-      "category": "Other"
-    },
-    {
-      "id": "uniswap",
-      "symbol": "UNI-USD",
-      "start_date": "2020-09-18",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "gst",
-      "symbol": "GST-USD",
-      "start_date": "2025-08-27",
-      "category": "Other"
-    },
-    {
-      "id": "gno",
-      "symbol": "GNO-USD",
-      "start_date": "2025-08-01",
-      "category": "Other"
-    },
-    {
-      "id": "egld",
-      "symbol": "EGLD-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "rpl",
-      "symbol": "RPL-USD",
-      "start_date": "2025-06-07",
-      "category": "Other"
+      "id": "litecoin",
+      "symbol": "LTC-USD",
+      "start_date": "2017-05-03",
+      "category": "Bitcoin forks & Classic",
+      "logo": "https://coin-images.coingecko.com/coins/images/2/large/litecoin.png?1696501400"
     },
     {
       "id": "bitcoin",
       "symbol": "BTC-USD",
       "start_date": "2015-07-20",
-      "category": "Major cryptocurrencies"
-    },
-    {
-      "id": "eigen",
-      "symbol": "EIGEN-USD",
-      "start_date": "2025-09-09",
-      "category": "Other"
-    },
-    {
-      "id": "bitcoin-cash",
-      "symbol": "BCH-USD",
-      "start_date": "2023-01-01",
-      "category": "Bitcoin forks & Classic"
-    },
-    {
-      "id": "usdt",
-      "symbol": "USDT-USD",
-      "start_date": "2025-09-20",
-      "category": "Stablecoins"
-    },
-    {
-      "id": "balancer",
-      "symbol": "BAL-USD",
-      "start_date": "2023-01-01",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "jitosol",
-      "symbol": "JITOSOL-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ach",
-      "symbol": "ACH-USD",
-      "start_date": "2023-03-01",
-      "category": "Other"
-    },
-    {
-      "id": "flock",
-      "symbol": "FLOCK-USD",
-      "start_date": "2025-09-17",
-      "category": "Other"
-    },
-    {
-      "id": "lpt",
-      "symbol": "LPT-USD",
-      "start_date": "2025-08-26",
-      "category": "Other"
-    },
-    {
-      "id": "shping",
-      "symbol": "SHPING-USD",
-      "start_date": "2025-01-15",
-      "category": "Other"
-    },
-    {
-      "id": "mamo",
-      "symbol": "MAMO-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "stx",
-      "symbol": "STX-USD",
-      "start_date": "2024-06-27",
-      "category": "Other"
-    },
-    {
-      "id": "akt",
-      "symbol": "AKT-USD",
-      "start_date": "2025-07-27",
-      "category": "Other"
-    },
-    {
-      "id": "dash",
-      "symbol": "DASH-USD",
-      "start_date": "2024-07-19",
-      "category": "Other"
-    },
-    {
-      "id": "rose",
-      "symbol": "ROSE-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "toshi",
-      "symbol": "TOSHI-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "rad",
-      "symbol": "RAD-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "inv",
-      "symbol": "INV-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ela",
-      "symbol": "ELA-USD",
-      "start_date": "2025-02-28",
-      "category": "Other"
-    },
-    {
-      "id": "velo",
-      "symbol": "VELO-USD",
-      "start_date": "2024-08-17",
-      "category": "Other"
-    },
-    {
-      "id": "tnsr",
-      "symbol": "TNSR-USD",
-      "start_date": "2025-07-09",
-      "category": "Other"
-    },
-    {
-      "id": "kernel",
-      "symbol": "KERNEL-USD",
-      "start_date": "2025-08-27",
-      "category": "Other"
-    },
-    {
-      "id": "math",
-      "symbol": "MATH-USD",
-      "start_date": "2025-09-13",
-      "category": "Other"
-    },
-    {
-      "id": "arkm",
-      "symbol": "ARKM-USD",
-      "start_date": "2024-06-18",
-      "category": "Other"
-    },
-    {
-      "id": "awe",
-      "symbol": "AWE-USD",
-      "start_date": "2025-09-09",
-      "category": "Other"
-    },
-    {
-      "id": "syrup",
-      "symbol": "SYRUP-USD",
-      "start_date": "2025-08-12",
-      "category": "Other"
-    },
-    {
-      "id": "knc",
-      "symbol": "KNC-USD",
-      "start_date": "2020-04-09",
-      "category": "Other"
-    },
-    {
-      "id": "dolo",
-      "symbol": "DOLO-USD",
-      "start_date": "2025-09-18",
-      "category": "Other"
-    },
-    {
-      "id": "tia",
-      "symbol": "TIA-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "mln",
-      "symbol": "MLN-USD",
-      "start_date": "2025-08-01",
-      "category": "Other"
-    },
-    {
-      "id": "strk",
-      "symbol": "STRK-USD",
-      "start_date": "2025-04-22",
-      "category": "Other"
-    },
-    {
-      "id": "acs",
-      "symbol": "ACS-USD",
-      "start_date": "2025-09-17",
-      "category": "Other"
-    },
-    {
-      "id": "degen",
-      "symbol": "DEGEN-USD",
-      "start_date": "2025-08-02",
-      "category": "Other"
-    },
-    {
-      "id": "eul",
-      "symbol": "EUL-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "powr",
-      "symbol": "POWR-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "super",
-      "symbol": "SUPER-USD",
-      "start_date": "2023-06-03",
-      "category": "Other"
-    },
-    {
-      "id": "badger",
-      "symbol": "BADGER-USD",
-      "start_date": "2023-10-22",
-      "category": "Other"
-    },
-    {
-      "id": "wlfi",
-      "symbol": "WLFI-USD",
-      "start_date": "2025-09-13",
-      "category": "Other"
-    },
-    {
-      "id": "audio",
-      "symbol": "AUDIO-USD",
-      "start_date": "2023-04-08",
-      "category": "Other"
-    },
-    {
-      "id": "sqd",
-      "symbol": "SQD-USD",
-      "start_date": "2025-06-14",
-      "category": "Other"
-    },
-    {
-      "id": "alt",
-      "symbol": "ALT-USD",
-      "start_date": "2025-05-20",
-      "category": "Other"
-    },
-    {
-      "id": "era",
-      "symbol": "ERA-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "trump",
-      "symbol": "TRUMP-USD",
-      "start_date": "2025-02-19",
-      "category": "Other"
-    },
-    {
-      "id": "basic-attention-token",
-      "symbol": "BAT-USD",
-      "start_date": "2023-04-09",
-      "category": "Utility tokens"
-    },
-    {
-      "id": "pepe",
-      "symbol": "PEPE-USD",
-      "start_date": "2025-08-27",
-      "category": "Meme coins"
-    },
-    {
-      "id": "hedera",
-      "symbol": "HBAR-USD",
-      "start_date": "2022-12-28",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "c98",
-      "symbol": "C98-USD",
-      "start_date": "2025-03-06",
-      "category": "Other"
-    },
-    {
-      "id": "towns",
-      "symbol": "TOWNS-USD",
-      "start_date": "2025-09-17",
-      "category": "Other"
-    },
-    {
-      "id": "pnut",
-      "symbol": "PNUT-USD",
-      "start_date": "2025-09-20",
-      "category": "Other"
-    },
-    {
-      "id": "la",
-      "symbol": "LA-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "pyth",
-      "symbol": "PYTH-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "asm",
-      "symbol": "ASM-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "b3",
-      "symbol": "B3-USD",
-      "start_date": "2025-03-03",
-      "category": "Other"
-    },
-    {
-      "id": "pro",
-      "symbol": "PRO-USD",
-      "start_date": "2023-04-01",
-      "category": "Other"
-    },
-    {
-      "id": "honey",
-      "symbol": "HONEY-USD",
-      "start_date": "2025-09-06",
-      "category": "Other"
-    },
-    {
-      "id": "mog",
-      "symbol": "MOG-USD",
-      "start_date": "2025-08-15",
-      "category": "Other"
-    },
-    {
-      "id": "doginme",
-      "symbol": "DOGINME-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "rare",
-      "symbol": "RARE-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "pundix",
-      "symbol": "PUNDIX-USD",
-      "start_date": "2024-08-19",
-      "category": "Other"
-    },
-    {
-      "id": "nkn",
-      "symbol": "NKN-USD",
-      "start_date": "2025-06-11",
-      "category": "Other"
-    },
-    {
-      "id": "mask-network",
-      "symbol": "MASK-USD",
-      "start_date": "2025-06-01",
-      "category": "Infrastructure & Web3"
-    },
-    {
-      "id": "zro",
-      "symbol": "ZRO-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "pol",
-      "symbol": "POL-USD",
-      "start_date": "2025-05-04",
-      "category": "Other"
-    },
-    {
-      "id": "bnkr",
-      "symbol": "BNKR-USD",
-      "start_date": "2025-09-18",
-      "category": "Other"
-    },
-    {
-      "id": "edge",
-      "symbol": "EDGE-USD",
-      "start_date": "2025-05-12",
-      "category": "Other"
-    },
-    {
-      "id": "fida",
-      "symbol": "FIDA-USD",
-      "start_date": "2023-07-05",
-      "category": "Other"
-    },
-    {
-      "id": "btrst",
-      "symbol": "BTRST-USD",
-      "start_date": "2024-03-16",
-      "category": "Other"
-    },
-    {
-      "id": "chainlink",
-      "symbol": "LINK-USD",
-      "start_date": "2023-01-01",
-      "category": "Infrastructure & Web3"
-    },
-    {
-      "id": "req",
-      "symbol": "REQ-USD",
-      "start_date": "2024-10-08",
-      "category": "Other"
-    },
-    {
-      "id": "paxg",
-      "symbol": "PAXG-USD",
-      "start_date": "2025-09-17",
-      "category": "Other"
-    },
-    {
-      "id": "gtc",
-      "symbol": "GTC-USD",
-      "start_date": "2023-10-25",
-      "category": "Other"
-    },
-    {
-      "id": "aave",
-      "symbol": "AAVE-USD",
-      "start_date": "2025-09-18",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "avt",
-      "symbol": "AVT-USD",
-      "start_date": "2025-06-14",
-      "category": "Other"
-    },
-    {
-      "id": "spa",
-      "symbol": "SPA-USD",
-      "start_date": "2025-06-11",
-      "category": "Other"
-    },
-    {
-      "id": "ondo",
-      "symbol": "ONDO-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "loka",
-      "symbol": "LOKA-USD",
-      "start_date": "2024-11-11",
-      "category": "Other"
-    },
-    {
-      "id": "l3",
-      "symbol": "L3-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "avnt",
-      "symbol": "AVNT-USD",
-      "start_date": "2025-09-15",
-      "category": "Other"
-    },
-    {
-      "id": "fartcoin",
-      "symbol": "FARTCOIN-USD",
-      "start_date": "2025-08-27",
-      "category": "Other"
-    },
-    {
-      "id": "litecoin",
-      "symbol": "LTC-USD",
-      "start_date": "2017-05-03",
-      "category": "Bitcoin forks & Classic"
-    },
-    {
-      "id": "idex",
-      "symbol": "IDEX-USD",
-      "start_date": "2024-11-02",
-      "category": "Other"
-    },
-    {
-      "id": "polkadot",
-      "symbol": "DOT-USD",
-      "start_date": "2025-03-06",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "bard",
-      "symbol": "BARD-USD",
-      "start_date": "2025-09-20",
-      "category": "Other"
-    },
-    {
-      "id": "turbo",
-      "symbol": "TURBO-USD",
-      "start_date": "2025-09-13",
-      "category": "Other"
-    },
-    {
-      "id": "high",
-      "symbol": "HIGH-USD",
-      "start_date": "2025-06-11",
-      "category": "Other"
-    },
-    {
-      "id": "mantle",
-      "symbol": "MANTLE-USD",
-      "start_date": "2025-06-11",
-      "category": "Other"
-    },
-    {
-      "id": "gfi",
-      "symbol": "GFI-USD",
-      "start_date": "2024-05-02",
-      "category": "Other"
-    },
-    {
-      "id": "curve",
-      "symbol": "CRV-USD",
-      "start_date": "2023-03-22",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "pump",
-      "symbol": "PUMP-USD",
-      "start_date": "2025-08-18",
-      "category": "Other"
-    },
-    {
-      "id": "aleo",
-      "symbol": "ALEO-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "internet-computer",
-      "symbol": "ICP-USD",
-      "start_date": "2025-05-07",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "mina",
-      "symbol": "MINA-USD",
-      "start_date": "2025-06-11",
-      "category": "Other"
-    },
-    {
-      "id": "trac",
-      "symbol": "TRAC-USD",
-      "start_date": "2024-06-05",
-      "category": "Other"
-    },
-    {
-      "id": "tru",
-      "symbol": "TRU-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "dimo",
-      "symbol": "DIMO-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "lcx",
-      "symbol": "LCX-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "zkc",
-      "symbol": "ZKC-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "ghst",
-      "symbol": "GHST-USD",
-      "start_date": "2025-09-01",
-      "category": "Other"
-    },
-    {
-      "id": "time",
-      "symbol": "TIME-USD",
-      "start_date": "2025-06-14",
-      "category": "Other"
-    },
-    {
-      "id": "bera",
-      "symbol": "BERA-USD",
-      "start_date": "2025-03-03",
-      "category": "Other"
-    },
-    {
-      "id": "tree",
-      "symbol": "TREE-USD",
-      "start_date": "2025-08-09",
-      "category": "Other"
-    },
-    {
-      "id": "w",
-      "symbol": "W-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "prcl",
-      "symbol": "PRCL-USD",
-      "start_date": "2025-05-14",
-      "category": "Other"
-    },
-    {
-      "id": "ethfi",
-      "symbol": "ETHFI-USD",
-      "start_date": "2025-06-21",
-      "category": "Other"
-    },
-    {
-      "id": "rsc",
-      "symbol": "RSC-USD",
-      "start_date": "2025-09-18",
-      "category": "Other"
-    },
-    {
-      "id": "bnt",
-      "symbol": "BNT-USD",
-      "start_date": "2023-02-23",
-      "category": "Other"
-    },
-    {
-      "id": "ankr",
-      "symbol": "ANKR-USD",
-      "start_date": "2024-02-02",
-      "category": "Infrastructure & Web3"
-    },
-    {
-      "id": "bico",
-      "symbol": "BICO-USD",
-      "start_date": "2025-03-06",
-      "category": "Other"
-    },
-    {
-      "id": "sui",
-      "symbol": "SUI-USD",
-      "start_date": "2023-07-18",
-      "category": "Layer 1 & Layer 2"
-    },
-    {
-      "id": "auction",
-      "symbol": "AUCTION-USD",
-      "start_date": "2024-12-15",
-      "category": "Other"
-    },
-    {
-      "id": "orca",
-      "symbol": "ORCA-USD",
-      "start_date": "2023-06-20",
-      "category": "Other"
-    },
-    {
-      "id": "filecoin",
-      "symbol": "FIL-USD",
-      "start_date": "2025-08-24",
-      "category": "Infrastructure & Web3"
-    },
-    {
-      "id": "prompt",
-      "symbol": "PROMPT-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "oxt",
-      "symbol": "OXT-USD",
-      "start_date": "2024-05-11",
-      "category": "Other"
-    },
-    {
-      "id": "boba",
-      "symbol": "BOBA-USD",
-      "start_date": "2025-06-07",
-      "category": "Other"
-    },
-    {
-      "id": "newt",
-      "symbol": "NEWT-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "vara",
-      "symbol": "VARA-USD",
-      "start_date": "2025-09-07",
-      "category": "Other"
-    },
-    {
-      "id": "sky",
-      "symbol": "SKY-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "home",
-      "symbol": "HOME-USD",
-      "start_date": "2025-06-11",
-      "category": "Other"
-    },
-    {
-      "id": "dia",
-      "symbol": "DIA-USD",
-      "start_date": "2024-07-11",
-      "category": "Other"
-    },
-    {
-      "id": "clv",
-      "symbol": "CLV-USD",
-      "start_date": "2024-08-19",
-      "category": "Other"
-    },
-    {
-      "id": "mdt",
-      "symbol": "MDT-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "inj",
-      "symbol": "INJ-USD",
-      "start_date": "2022-12-31",
-      "category": "Other"
-    },
-    {
-      "id": "cvx",
-      "symbol": "CVX-USD",
-      "start_date": "2025-03-05",
-      "category": "Other"
-    },
-    {
-      "id": "red",
-      "symbol": "RED-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "aero",
-      "symbol": "AERO-USD",
-      "start_date": "2025-01-09",
-      "category": "Other"
-    },
-    {
-      "id": "spk",
-      "symbol": "SPK-USD",
-      "start_date": "2025-09-18",
-      "category": "Other"
+      "category": "Major cryptocurrencies",
+      "logo": "https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400"
     },
     {
       "id": "ethereum",
       "symbol": "ETH-USD",
       "start_date": "2016-07-21",
-      "category": "Major cryptocurrencies"
+      "category": "Major cryptocurrencies",
+      "logo": "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628"
     },
     {
-      "id": "vtho",
-      "symbol": "VTHO-USD",
-      "start_date": "2024-08-10",
-      "category": "Other"
+      "id": "morpho",
+      "symbol": "MORPHO-USD",
+      "start_date": "2025-09-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/29837/large/Morpho-token-icon.png?1726771230"
     },
     {
-      "id": "decentraland",
-      "symbol": "MANA-USD",
-      "start_date": "2021-05-06",
-      "category": "Gaming & Metaverse"
+      "id": "vechain",
+      "symbol": "VET-USD",
+      "start_date": "2025-08-03",
+      "category": "Layer 1 & Layer 2",
+      "logo": "https://coin-images.coingecko.com/coins/images/1167/large/VET.png?1742383283"
     },
     {
-      "id": "prove",
-      "symbol": "PROVE-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "quant-network",
+      "symbol": "QNT-USD",
+      "start_date": "2025-08-02",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/3370/large/5ZOu7brX_400x400.jpg?1696504070"
     },
     {
-      "id": "magic",
-      "symbol": "MAGIC-USD",
-      "start_date": "2022-12-28",
-      "category": "Other"
+      "id": "venice-token",
+      "symbol": "VVV-USD",
+      "start_date": "2025-07-06",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/54023/large/VVV_Token_Transparent.png?1741856877"
     },
     {
-      "id": "msol",
-      "symbol": "MSOL-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "mkr",
+      "symbol": "MKR-USD",
+      "start_date": "2020-11-01",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "a8",
-      "symbol": "A8-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "render-token",
+      "symbol": "RENDER-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/11636/large/rndr.png?1696511529"
     },
     {
-      "id": "suku",
-      "symbol": "SUKU-USD",
-      "start_date": "2023-07-18",
-      "category": "Other"
+      "id": "stader",
+      "symbol": "SD-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "muse",
-      "symbol": "MUSE-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "numeraire",
+      "symbol": "NMR-USD",
+      "start_date": "2023-05-30",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/752/large/numeraire.png?1696501906"
     },
     {
-      "id": "png",
-      "symbol": "PNG-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "axelar",
+      "symbol": "AXL-USD",
+      "start_date": "2025-03-07",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/27277/large/V-65_xQ1_400x400.jpeg?1696526329"
     },
     {
-      "id": "xrp",
-      "symbol": "XRP-USD",
-      "start_date": "2025-03-06",
-      "category": "Privacy & Payments"
+      "id": "chain-2",
+      "symbol": "XCN-USD",
+      "start_date": "2025-07-31",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/24210/large/onyxlogo.jpg?1696523397"
     },
     {
-      "id": "trb",
-      "symbol": "TRB-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "blz",
+      "symbol": "BLZ-USD",
+      "start_date": "2025-08-17",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "immutablex",
-      "symbol": "IMX-USD",
-      "start_date": "2025-04-06",
-      "category": "Gaming & Metaverse"
+      "id": "math",
+      "symbol": "MATH-USD",
+      "start_date": "2025-05-27",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "cookie",
-      "symbol": "COOKIE-USD",
-      "start_date": "2025-09-18",
-      "category": "Other"
+      "id": "dash",
+      "symbol": "DASH-USD",
+      "start_date": "2024-08-20",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/19/large/dash-logo.png?1696501423"
     },
     {
-      "id": "amp",
-      "symbol": "AMP-USD",
-      "start_date": "2025-09-06",
-      "category": "Other"
+      "id": "algorand",
+      "symbol": "ALGO-USD",
+      "start_date": "2025-09-14",
+      "category": "Layer 1 & Layer 2",
+      "logo": "https://coin-images.coingecko.com/coins/images/4380/large/download.png?1696504978"
     },
     {
-      "id": "cbeth",
-      "symbol": "CBETH-USD",
-      "start_date": "2025-08-13",
-      "category": "Other"
+      "id": "big-time",
+      "symbol": "BIGTIME-USD",
+      "start_date": "2024-05-06",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/32251/large/-6136155493475923781_121.jpg?1696998691"
     },
     {
-      "id": "qi",
-      "symbol": "QI-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "towns",
+      "symbol": "TOWNS-USD",
+      "start_date": "2025-08-16",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "stg",
-      "symbol": "STG-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "worldcoin-wld",
+      "symbol": "WLD-USD",
+      "start_date": "2025-07-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/31069/large/worldcoin.jpeg?1696529903"
     },
     {
-      "id": "karrat",
-      "symbol": "KARRAT-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "ondo-finance",
+      "symbol": "ONDO-USD",
+      "start_date": "2025-07-24",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/26580/large/ONDO.png?1696525656"
     },
     {
-      "id": "swell",
-      "symbol": "SWELL-USD",
-      "start_date": "2025-07-27",
-      "category": "Other"
-    },
-    {
-      "id": "aioz",
-      "symbol": "AIOZ-USD",
-      "start_date": "2024-03-23",
-      "category": "Other"
-    },
-    {
-      "id": "krl",
-      "symbol": "KRL-USD",
-      "start_date": "2023-07-18",
-      "category": "Other"
-    },
-    {
-      "id": "api3",
-      "symbol": "API3-USD",
-      "start_date": "2022-11-11",
-      "category": "Other"
-    },
-    {
-      "id": "dext",
-      "symbol": "DEXT-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "loopring",
-      "symbol": "LRC-USD",
-      "start_date": "2023-01-01",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "perpetual-protocol",
-      "symbol": "PERP-USD",
-      "start_date": "2025-05-01",
-      "category": "DeFi tokens"
-    },
-    {
-      "id": "gmt",
-      "symbol": "GMT-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
-    },
-    {
-      "id": "skale",
-      "symbol": "SKL-USD",
-      "start_date": "2025-06-14",
-      "category": "Infrastructure & Web3"
+      "id": "ankr",
+      "symbol": "ANKR-USD",
+      "start_date": "2021-05-13",
+      "category": "Infrastructure & Web3",
+      "logo": "https://coin-images.coingecko.com/coins/images/4324/large/Ankr_Blue_Symbol.png?1754623142"
     },
     {
       "id": "pyr",
       "symbol": "PYR-USD",
+      "start_date": "2023-03-29",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "livepeer",
+      "symbol": "LPT-USD",
       "start_date": "2025-02-09",
-      "category": "Other"
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/7137/large/badge-logo-circuit-green.png?1719357686"
     },
     {
-      "id": "tezos",
-      "symbol": "XTZ-USD",
-      "start_date": "2025-08-26",
-      "category": "Layer 1 & Layer 2"
+      "id": "mog-coin",
+      "symbol": "MOG-USD",
+      "start_date": "2025-02-04",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/31059/large/MOG_LOGO_200x200.png?1696529893"
     },
     {
-      "id": "omni",
-      "symbol": "OMNI-USD",
-      "start_date": "2025-05-29",
-      "category": "Other"
+      "id": "btrst",
+      "symbol": "BTRST-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "bigtime",
-      "symbol": "BIGTIME-USD",
-      "start_date": "2025-08-27",
-      "category": "Other"
+      "id": "gods-unchained",
+      "symbol": "GODS-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "celr",
-      "symbol": "CELR-USD",
-      "start_date": "2025-08-24",
-      "category": "Other"
+      "id": "layerzero",
+      "symbol": "ZRO-USD",
+      "start_date": "2024-07-01",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/28206/large/ftxG9_TJ_400x400.jpeg?1696527208"
     },
     {
-      "id": "sd",
-      "symbol": "SD-USD",
-      "start_date": "2025-09-15",
-      "category": "Other"
+      "id": "ethereum-name-service",
+      "symbol": "ENS-USD",
+      "start_date": "2025-07-10",
+      "category": "Gaming & Metaverse",
+      "logo": "https://coin-images.coingecko.com/coins/images/19785/large/ENS.jpg?1727872989"
     },
     {
-      "id": "pendle",
-      "symbol": "PENDLE-USD",
-      "start_date": "2025-05-31",
-      "category": "Other"
+      "id": "official-trump",
+      "symbol": "TRUMP-USD",
+      "start_date": "2025-03-06",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/53746/large/trump.png?1737171561"
     },
     {
-      "id": "pengu",
-      "symbol": "PENGU-USD",
-      "start_date": "2025-09-20",
-      "category": "Other"
+      "id": "lcx",
+      "symbol": "LCX-USD",
+      "start_date": "2025-02-21",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/9985/large/zRPSu_0o_400x400.jpg?1696510023"
     },
     {
-      "id": "maker",
-      "symbol": "MKR-USD",
-      "start_date": "2023-04-03",
-      "category": "DeFi tokens"
+      "id": "researchcoin",
+      "symbol": "RSC-USD",
+      "start_date": "2025-08-28",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/28146/large/RH_BOTTLE_CLEAN_Aug_2024_1.png?1732742001"
     },
     {
-      "id": "flr",
-      "symbol": "FLR-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "mantle",
+      "symbol": "MANTLE-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/30980/large/Mantle-Logo-mark.png?1739213200"
     },
     {
-      "id": "aleph",
-      "symbol": "ALEPH-USD",
-      "start_date": "2023-07-16",
-      "category": "Other"
+      "id": "succinct",
+      "symbol": "PROVE-USD",
+      "start_date": "2025-09-21",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/67905/large/succinct-logo.png?1754228574"
     },
     {
-      "id": "bio",
+      "id": "zetachain",
+      "symbol": "ZETA-USD",
+      "start_date": "2025-01-04",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/26718/large/Twitter_icon.png?1696525788"
+    },
+    {
+      "id": "prcl",
+      "symbol": "PRCL-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "spa",
+      "symbol": "SPA-USD",
+      "start_date": "2025-08-22",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "convex-finance",
+      "symbol": "CVX-USD",
+      "start_date": "2024-07-14",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/15585/large/convex.png?1696515221"
+    },
+    {
+      "id": "audius",
+      "symbol": "AUDIO-USD",
+      "start_date": "2023-02-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/12913/large/audio-token-asset_2x.png?1747243328"
+    },
+    {
+      "id": "oxt",
+      "symbol": "OXT-USD",
+      "start_date": "2025-09-21",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "apecoin",
+      "symbol": "APE-USD",
+      "start_date": "2023-07-09",
+      "category": "Gaming & Metaverse",
+      "logo": "https://coin-images.coingecko.com/coins/images/24383/large/APECOIN.png?1756551529"
+    },
+    {
+      "id": "bankercoin-2",
+      "symbol": "BNKR-USD",
+      "start_date": "2025-09-14",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "syrup",
+      "symbol": "SYRUP-USD",
+      "start_date": "2025-07-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/51232/large/_syrup_token_logo.png?1747292046"
+    },
+    {
+      "id": "shping",
+      "symbol": "SHPING-USD",
+      "start_date": "2023-07-06",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "bio-protocol",
       "symbol": "BIO-USD",
-      "start_date": "2025-08-02",
-      "category": "Other"
+      "start_date": "2025-09-10",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/53022/large/bio.jpg?1735011002"
     },
     {
-      "id": "ena",
-      "symbol": "ENA-USD",
-      "start_date": "2025-06-14",
-      "category": "Other"
+      "id": "aleo",
+      "symbol": "ALEO-USD",
+      "start_date": "2024-11-26",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/27916/large/secondary-icon-dark.png?1726770428"
     },
     {
-      "id": "cro",
-      "symbol": "CRO-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "polkadot",
+      "symbol": "DOT-USD",
+      "start_date": "2025-07-31",
+      "category": "Layer 1 & Layer 2",
+      "logo": "https://coin-images.coingecko.com/coins/images/12171/large/polkadot.png?1696512008"
     },
     {
-      "id": "wcfg",
+      "id": "polyswarm",
+      "symbol": "NCT-USD",
+      "start_date": "2024-08-15",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "kernel-2",
+      "symbol": "KERNEL-USD",
+      "start_date": "2025-06-02",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "fox",
+      "symbol": "FOX-USD",
+      "start_date": "2025-09-16",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "sky",
+      "symbol": "SKY-USD",
+      "start_date": "2025-09-07",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/39925/large/sky.jpg?1724827980"
+    },
+    {
+      "id": "velo",
+      "symbol": "VELO-USD",
+      "start_date": "2024-07-26",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/12538/large/Logo_200x_200.png?1696512350"
+    },
+    {
+      "id": "pancakeswap-token",
+      "symbol": "CAKE-USD",
+      "start_date": "2025-08-03",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/12632/large/pancakeswap-cake-logo_%281%29.png?1696512440"
+    },
+    {
+      "id": "pax-gold",
+      "symbol": "PAXG-USD",
+      "start_date": "2025-06-07",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/9519/large/paxgold.png?1696509604"
+    },
+    {
+      "id": "vara",
+      "symbol": "VARA-USD",
+      "start_date": "2025-06-08",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "neon",
+      "symbol": "NEON-USD",
+      "start_date": "2025-02-10",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "turbo",
+      "symbol": "TURBO-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/30117/large/TurboMark-QL_200.png?1708079597"
+    },
+    {
+      "id": "immutable-x",
+      "symbol": "IMX-USD",
+      "start_date": "2023-07-05",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/17233/large/immutableX-symbol-BLK-RGB.png?1696516787"
+    },
+    {
+      "id": "idex",
+      "symbol": "IDEX-USD",
+      "start_date": "2025-08-22",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "doginme",
+      "symbol": "DOGINME-USD",
+      "start_date": "2025-04-26",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "origintrail",
+      "symbol": "TRAC-USD",
+      "start_date": "2025-02-26",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/1877/large/TRAC.jpg?1696502873"
+    },
+    {
+      "id": "wrapped-centrifuge",
       "symbol": "WCFG-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "start_date": "2024-07-29",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/17106/large/WCFG.jpg?1696516667"
     },
     {
-      "id": "render",
-      "symbol": "RENDER-USD",
-      "start_date": "2025-08-18",
-      "category": "Other"
+      "id": "ocean-protocol",
+      "symbol": "OCEAN-USD",
+      "start_date": "2023-05-03",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "dnt",
-      "symbol": "DNT-USD",
-      "start_date": "2022-11-11",
-      "category": "Other"
+      "id": "seam",
+      "symbol": "SEAM-USD",
+      "start_date": "2025-06-15",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "spell",
-      "symbol": "SPELL-USD",
-      "start_date": "2025-03-03",
-      "category": "Other"
+      "id": "echelon-prime",
+      "symbol": "PRIME-USD",
+      "start_date": "2024-08-20",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/29053/large/prime-logo-small-border_%282%29.png?1696528020"
     },
     {
-      "id": "cvc",
-      "symbol": "CVC-USD",
-      "start_date": "2023-01-01",
-      "category": "Other"
+      "id": "dolomite",
+      "symbol": "DOLO-USD",
+      "start_date": "2025-09-19",
+      "category": "Other",
+      "logo": ""
     },
     {
-      "id": "shdw",
-      "symbol": "SHDW-USD",
-      "start_date": "2025-07-07",
-      "category": "Other"
+      "id": "0x",
+      "symbol": "ZRX-USD",
+      "start_date": "2020-01-13",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/863/large/0x.png?1696501996"
+    },
+    {
+      "id": "origin-protocol",
+      "symbol": "OGN-USD",
+      "start_date": "2021-05-11",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "gtc",
+      "symbol": "GTC-USD",
+      "start_date": "2025-03-07",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "blur",
+      "symbol": "BLUR-USD",
+      "start_date": "2025-08-03",
+      "category": "Gaming & Metaverse",
+      "logo": "https://coin-images.coingecko.com/coins/images/28453/large/blur.png?1696527448"
+    },
+    {
+      "id": "rari",
+      "symbol": "RARI-USD",
+      "start_date": "2024-01-09",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "api3",
+      "symbol": "API3-USD",
+      "start_date": "2025-03-04",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/13256/large/Api3-Token.png?1742439807"
+    },
+    {
+      "id": "uma",
+      "symbol": "UMA-USD",
+      "start_date": "2022-12-14",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/10951/large/UMA.png?1696510900"
+    },
+    {
+      "id": "power-ledger",
+      "symbol": "POWR-USD",
+      "start_date": "2025-01-16",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/1104/large/Powerledger_Token_logo_%281%29.png?1741750417"
+    },
+    {
+      "id": "ripple",
+      "symbol": "XRP-USD",
+      "start_date": "2023-07-19",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1696501442"
+    },
+    {
+      "id": "mdt",
+      "symbol": "MDT-USD",
+      "start_date": "2025-08-17",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "home",
+      "symbol": "HOME-USD",
+      "start_date": "2025-08-28",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/54873/large/defi-app.png?1742235743"
+    },
+    {
+      "id": "metaplex",
+      "symbol": "MPLX-USD",
+      "start_date": "2025-09-16",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/27344/large/mplx.png?1696526391"
+    },
+    {
+      "id": "dextools",
+      "symbol": "DEXT-USD",
+      "start_date": "2023-07-06",
+      "category": "Other",
+      "logo": ""
+    },
+    {
+      "id": "story-2",
+      "symbol": "IP-USD",
+      "start_date": "2025-09-13",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/54035/large/Transparent_bg.png?1738075331"
+    },
+    {
+      "id": "peanut-the-squirrel",
+      "symbol": "PNUT-USD",
+      "start_date": "2025-07-27",
+      "category": "Other",
+      "logo": "https://coin-images.coingecko.com/coins/images/51301/large/Peanut_the_Squirrel.png?1734941241"
     }
   ]
 }

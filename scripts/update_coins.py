@@ -127,69 +127,105 @@ def filter_usd_pairs(products: List[Dict]) -> List[Dict]:
     return usd_pairs
 
 
-def get_coin_id_from_symbol(symbol: str) -> str:
-    """Convert a symbol like BTC to a coin ID like bitcoin."""
-    symbol_to_id = {
-        "BTC": "bitcoin",
-        "ETH": "ethereum",
-        "SOL": "solana",
-        "XRP": "xrp",
-        "ADA": "ada",
-        "AVAX": "avalanche",
-        "DOGE": "dogecoin",
-        "DOT": "polkadot",
-        "MATIC": "polygon",
-        "LINK": "chainlink",
-        "NEAR": "near",
-        "ICP": "internet-computer",
-        "ATOM": "cosmos",
-        "APT": "aptos",
-        "ARB": "arbitrum",
-        "OP": "optimism",
-        "SUI": "sui",
-        "UNI": "uniswap",
-        "AAVE": "aave",
-        "CRV": "curve",
-        "MKR": "maker",
-        "COMP": "compound",
-        "SNX": "synthetix",
-        "LDO": "lido",
-        "SUSHI": "sushiswap",
-        "YFI": "yearn-finance",
-        "BAL": "balancer",
-        "PERP": "perpetual-protocol",
-        "SAND": "sandbox",
-        "MANA": "decentraland",
-        "AXS": "axie-infinity",
-        "IMX": "immutablex",
-        "ENS": "ethereum-name-service",
-        "BLUR": "blur",
-        "APE": "apecoin",
-        "FIL": "filecoin",
-        "GRT": "the-graph",
-        "LRC": "loopring",
-        "ANKR": "ankr",
-        "SKL": "skale",
-        "MASK": "mask-network",
-        "LTC": "litecoin",
-        "BCH": "bitcoin-cash",
-        "ETC": "ethereum-classic",
-        "ZEC": "zcash",
-        "XLM": "stellar",
-        "VET": "vechain",
-        "HBAR": "hedera",
-        "QNT": "quant",
-        "ALGO": "algorand",
-        "EOS": "eos",
-        "XTZ": "tezos",
-        "CHZ": "chiliz",
-        "BAT": "basic-attention-token",
-        "1INCH": "1inch",
-        "SHIB": "shiba-inu",
-        "WIF": "dogwifhat"
-    }
+def get_coin_ids_from_symbols(symbols: List[str]) -> Dict[str, str]:
+    """Convert symbols to coin IDs using CoinGecko markets (with market cap rank)."""
+    import requests
     
-    return symbol_to_id.get(symbol, symbol.lower())
+    symbol_to_id = {}
+    
+    try:
+        # Use the same markets endpoint that we use for logos - it has market cap ranking
+        all_coins = []
+        for page in range(1, 5):  # Get top 1000 coins (4 pages x 250)
+            url = "https://api.coingecko.com/api/v3/coins/markets"
+            params = {
+                "vs_currency": "usd",
+                "order": "market_cap_desc", 
+                "per_page": 250,
+                "page": page,
+                "sparkline": False
+            }
+            
+            response = requests.get(url, params=params, timeout=30)
+            if response.status_code == 200:
+                page_coins = response.json()
+                if not page_coins:  # No more pages
+                    break
+                all_coins.extend(page_coins)
+            else:
+                break
+        
+        # Create symbol to ID mapping, preferring coins with better market cap rank
+        symbol_map = {}
+        for coin in all_coins:
+            symbol = coin.get("symbol", "").upper()
+            coin_id = coin.get("id")
+            market_cap_rank = coin.get("market_cap_rank")
+            
+            if symbol and coin_id:
+                if symbol not in symbol_map or (market_cap_rank and market_cap_rank < symbol_map[symbol].get("rank", float('inf'))):
+                    symbol_map[symbol] = {"id": coin_id, "rank": market_cap_rank or float('inf')}
+        
+        # Map our symbols
+        for symbol in symbols:
+            mapping = symbol_map.get(symbol.upper())
+            if mapping:
+                symbol_to_id[symbol] = mapping["id"]
+            else:
+                symbol_to_id[symbol] = symbol.lower()
+                
+        print(f"Resolved {len([s for s in symbols if s.upper() in symbol_map])}/{len(symbols)} symbols from top 1000 coins")
+                
+    except Exception as e:
+        print(f"Warning: Could not resolve symbols: {e}")
+        for symbol in symbols:
+            symbol_to_id[symbol] = symbol.lower()
+    
+    return symbol_to_id
+
+
+def get_all_logo_urls() -> Dict[str, str]:
+    """Fetch logo URLs for all coins from CoinGecko in batch."""
+    try:
+        import requests
+        # Get top 500 coins with logos
+        url = "https://api.coingecko.com/api/v3/coins/markets"
+        params = {
+            "vs_currency": "usd",
+            "order": "market_cap_desc",
+            "per_page": 250,
+            "page": 1,
+            "sparkline": False,
+            "locale": "en"
+        }
+        
+        logos = {}
+        # Fetch page 1
+        response = requests.get(url, params=params, timeout=30)
+        if response.status_code == 200:
+            coins = response.json()
+            for coin in coins:
+                coin_id = coin["id"]
+                image_url = coin.get("image", "")
+                if image_url:
+                    logos[coin_id] = image_url
+        
+        # Fetch pages 2-4 for more coins
+        for page_num in range(2, 5):  # pages 2, 3, 4
+            params["page"] = page_num
+            response = requests.get(url, params=params, timeout=30)
+            if response.status_code == 200:
+                coins = response.json()
+                for coin in coins:
+                    coin_id = coin["id"]
+                    image_url = coin.get("image", "")
+                    if image_url:
+                        logos[coin_id] = image_url
+        
+        return logos
+    except Exception as e:
+        print(f"Warning: Could not fetch logo URLs: {e}")
+        return {}
 
 
 def get_category_for_coin(coin_id: str) -> str:
@@ -228,11 +264,12 @@ def get_category_for_coin(coin_id: str) -> str:
     return "Other"
 
 
-async def process_coin(session: aiohttp.ClientSession, pair: dict, existing_config: dict, find_dates: bool) -> Optional[dict]:
+async def process_coin(session: aiohttp.ClientSession, pair: dict, existing_config: dict, find_dates: bool, logos: Dict[str, str], coin_id_map: Dict[str, str]) -> Optional[dict]:
     """Process a single coin to get its configuration."""
     symbol = pair["symbol"]
     product_id = pair["id"]
-    coin_id = get_coin_id_from_symbol(symbol)
+    base_symbol = pair["base_currency"]
+    coin_id = coin_id_map.get(base_symbol, base_symbol.lower())
     
     # Check if we already have a start date
     if coin_id in existing_config:
@@ -250,16 +287,17 @@ async def process_coin(session: aiohttp.ClientSession, pair: dict, existing_conf
         "id": coin_id,
         "symbol": product_id,
         "start_date": start_date,
-        "category": get_category_for_coin(coin_id)
+        "category": get_category_for_coin(coin_id),
+        "logo": logos.get(coin_id, "")
     }
 
 
-async def process_all_coins(usd_pairs: List[dict], existing_config: dict, find_dates: bool) -> List[dict]:
+async def process_all_coins(usd_pairs: List[dict], existing_config: dict, find_dates: bool, logos: Dict[str, str], coin_id_map: Dict[str, str]) -> List[dict]:
     """Process all coins with parallel processing."""
     async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(limit=20)) as session:
         # Create tasks for all coins
         tasks = [
-            process_coin(session, pair, existing_config, find_dates)
+            process_coin(session, pair, existing_config, find_dates, logos, coin_id_map)
             for pair in usd_pairs
         ]
         
@@ -347,9 +385,20 @@ async def main():
     except:
         existing_config = {}
     
+    # Get unique symbols for coin ID resolution
+    unique_symbols = list(set(pair["base_currency"] for pair in usd_pairs))
+    print(f"\nResolving coin IDs for {len(unique_symbols)} unique symbols...")
+    coin_id_map = get_coin_ids_from_symbols(unique_symbols)
+    print(f"Resolved {len(coin_id_map)} coin IDs")
+    
+    # Fetch logo URLs
+    print("\nFetching logo URLs from CoinGecko...")
+    logos = get_all_logo_urls()
+    print(f"Found logos for {len(logos)} coins")
+    
     # Process all coins with parallel processing
     print(f"\nProcessing coins (parallel, find_dates={'Yes' if not args.no_find_dates else 'No'}):")
-    coins = await process_all_coins(usd_pairs, existing_config, not args.no_find_dates)
+    coins = await process_all_coins(usd_pairs, existing_config, not args.no_find_dates, logos, coin_id_map)
     
     # Sort coins based on user preference
     if args.sort == "market-cap":
