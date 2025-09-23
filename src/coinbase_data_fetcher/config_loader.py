@@ -67,7 +67,8 @@ def load_coin_info(config_path: Path | str | None = None) -> Dict[str, CoinInfo]
         coin_info[coin_id] = CoinInfo(
             coin=coin_id,
             symbol=config["symbol"],
-            start_date=pd.Timestamp(config["start_date"])
+            start_date=pd.Timestamp(config["start_date"]),
+            logo_url=config.get("logo", "")
         )
     
     return coin_info

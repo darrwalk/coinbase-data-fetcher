@@ -9,7 +9,7 @@ from pandas import Timestamp
 from pydantic import BaseModel, Field, field_validator
 
 from coinbase_data_fetcher.progress import ProgressBar, NullProgressBar
-from coinbase_data_fetcher.config_loader import load_coin_info
+from coinbase_data_fetcher.config_loader import load_coin_info, load_coins_config
 
 
 def yesterday_ts() -> pd.Timestamp:
@@ -17,89 +17,61 @@ def yesterday_ts() -> pd.Timestamp:
     return pd.Timestamp(datetime.now().date() - timedelta(days=1))
 
 
-class Coins(StrEnum):
-    # Major cryptocurrencies
-    BITCOIN = "bitcoin"
-    ETHEREUM = "ethereum"
-    
-    # Top 10 by market cap
-    SOLANA = "solana"
-    XRP = "xrp"
-    ADA = "ada"
-    AVAX = "avalanche"
-    DOGECOIN = "dogecoin"
-    DOT = "polkadot"
-    MATIC = "polygon"
-    LINK = "chainlink"
-    
-    # Layer 1 & Layer 2
-    NEAR = "near"
-    ICP = "internet-computer"
-    ATOM = "cosmos"
-    APT = "aptos"
-    ARB = "arbitrum"
-    OP = "optimism"
-    SUI = "sui"
-    
-    # DeFi tokens
-    UNI = "uniswap"
-    AAVE = "aave"
-    CRV = "curve"
-    MKR = "maker"
-    COMP = "compound"
-    SNX = "synthetix"
-    LDO = "lido"
-    SUSHI = "sushiswap"
-    YFI = "yearn-finance"
-    BAL = "balancer"
-    PERP = "perpetual-protocol"
-    
-    # Gaming & Metaverse
-    SAND = "sandbox"
-    MANA = "decentraland"
-    AXS = "axie-infinity"
-    IMX = "immutablex"
-    ENS = "ethereum-name-service"
-    BLUR = "blur"
-    APE = "apecoin"
-    
-    # Infrastructure & Web3
-    FIL = "filecoin"
-    GRT = "the-graph"
-    LRC = "loopring"
-    ANKR = "ankr"
-    SKL = "skale"
-    MASK = "mask-network"
-    
-    # Bitcoin forks & Classic
-    LITECOIN = "litecoin"
-    BCH = "bitcoin-cash"
-    ETC = "ethereum-classic"
-    
-    # Privacy & Payments
-    ZEC = "zcash"
-    XLM = "stellar"
-    
-    # Enterprise & Other
-    VET = "vechain"
-    HBAR = "hedera"
-    QNT = "quant"
-    ALGO = "algorand"
-    EOS = "eos"
-    XTZ = "tezos"
-    CHZ = "chiliz"
-    
-    # Utility tokens
-    BAT = "basic-attention-token"
-    ONEINCH = "1inch"
-    
-    # Meme coins
-    SHIB = "shiba-inu"
-    WIF = "dogwifhat"
+def _create_coins_enum():
+    """Dynamically create Coins enum from available coin configuration."""
+    try:
+        coins_config = load_coins_config()
+        available_coins = list(coins_config.keys())
+        
+        # Create enum members dynamically
+        enum_dict = {}
+        for coin_id in sorted(available_coins):
+            # Convert coin ID to enum name (uppercase, replace hyphens with underscores)
+            enum_name = coin_id.upper().replace('-', '_').replace(' ', '_')
+            # Handle special cases for readability
+            name_mapping = {
+                'QUANT_NETWORK': 'QNT',
+                'RENDER_TOKEN': 'RENDER', 
+                'OFFICIAL_TRUMP': 'TRUMP',
+                'IMMUTABLE_X': 'IMX',
+                'ETHEREUM_NAME_SERVICE': 'ENS',
+                'VENICE_TOKEN': 'VVV',
+                'WORLDCOIN_WLD': 'WLD',
+                'ONDO_FINANCE': 'ONDO',
+                'BIG_TIME': 'BIGTIME',
+                'MOG_COIN': 'MOG',
+                'GODS_UNCHAINED': 'GODS',
+                'BIO_PROTOCOL': 'BIO',
+                'CONVEX_FINANCE': 'CVX',
+                'CHAIN_2': 'XCN',
+                'PANCAKESWAP_TOKEN': 'CAKE',
+                'PAX_GOLD': 'PAXG',
+                'ECHELON_PRIME': 'PRIME',
+                'POWER_LEDGER': 'POWR',
+                'OCEAN_PROTOCOL': 'OCEAN',
+                'ORIGIN_PROTOCOL': 'OGN',
+                'WRAPPED_CENTRIFUGE': 'WCFG',
+                'PEANUT_THE_SQUIRREL': 'PNUT',
+                'STORY_2': 'IP',
+                'BANKERCOIN_2': 'BNKR',
+                'KERNEL_2': 'KERNEL'
+            }
+            enum_name = name_mapping.get(enum_name, enum_name)
+            enum_dict[enum_name] = coin_id
+            
+        return StrEnum('Coins', enum_dict)
+    except Exception:
+        # Fallback to basic coins if config loading fails
+        return StrEnum('Coins', {
+            'BITCOIN': 'bitcoin',
+            'ETHEREUM': 'ethereum',
+            'LITECOIN': 'litecoin'
+        })
 
+# Create the Coins enum dynamically
+Coins = _create_coins_enum()
 
-# Load coin info from configuration file
-# Map string keys to Coins enum
+# Load coin info from configuration file  
 _coin_info_str = load_coin_info()
 COIN_INFO = {}
 for member in Coins:
