@@ -35,6 +35,9 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+coinbase_data_fetcher = ["coins_config.json"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py39"

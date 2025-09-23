@@ -37,8 +37,8 @@ def load_coins_config(config_path: Path | str | None = None) -> Dict[str, dict]:
         Dictionary mapping coin IDs to their configuration.
     """
     if config_path is None:
-        # Try to find the config file in the project root
-        config_path = Path(__file__).parent.parent.parent / "coins_config.json"
+        # Try to find the config file in the package directory
+        config_path = Path(__file__).parent / "coins_config.json"
     
     config_path = Path(config_path)
     
